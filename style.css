@@ -1,0 +1,64 @@
+
+
+#banner {
+
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    padding:1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+li a {
+    color: black;
+}
+
+section {
+    color: white;
+}
+
+#home {
+    display: flex;
+
+    padding: 7.3%;
+    background-color: dodgerblue;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: bold;
+}
+
+#home div {
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+}
+
+#contact {
+    background-color: limegreen;
+    color: white;
+    width: 70%;
+    height: 72px;
+    border-radius: 10px;
+}
+
+#presentation {
+    background-color: mediumpurple;
+}
+
+.img {
+
+}
