@@ -5,10 +5,11 @@
   <title>Title</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Miadmi+One&display=swap" rel="stylesheet">
 </head>
 <body>
 <header id="banner">
-  <img src="image.png" alt="">
+  <img src="images/image.png" alt="Logo de l'association France Dépression">
     <nav>
       <ul>
         <li>
@@ -22,6 +23,10 @@
         </li>
       </ul>
     </nav>
+    <div class="images-container">
+      <img src="images/insta.png" alt="Image 1" >
+      <img src="images/linkedin.png" alt="Image 2">
+    </div>
 </header>
 <main>
   <section>
@@ -31,22 +36,116 @@
         <p>C'est tout à fait normal d'avoir des coups de mou, mais le plus important est d'en parler.</p>
         <button id="contact">Contactez-nous dès maintenant !</button>
       </div>
-      <img class="img" src="OIP.jpg" alt="">
-
+      <img class="img" src="images/OIP.jpg" alt="">
     </div>
 
   </section>
   <section>
     <div id="presentation">
-
-
-    </div>
-
+      <h1>Qui sommes nous ?</h1>
+      <p>France Dépression est une association fondée en 1992 ayant pour mission :</p>
+      <div id="missions"class="container">
+        <div class="row">
+          <div class="col-12 col-md-4 text-center">
+            <img src="images/soutien.png" alt="" class="img-col">
+            <p>Soutenir les personnes atteintes de <span class="surligner">dépression</span> ou de <span class="surligner">troubles bipolaires</span>.</p>
+          </div>
+          <div class="col-12 col-md-4 text-center">
+            <img src="images/stop.png" alt="" class="img-col">
+            <p>Lutter contre la <span class="surligner">stigmatisation</span> et la <span class="surligner">violence</span> à l'encontre d'autrui.</p>
+          </div>
+          <div class="col-12 col-md-4 text-center">
+            <img src="images/poigneedemain.png" alt="" class="img-col">
+            <p>Promouvoir leur <span class="surligner">dignité</span> et le <span class="surligner">respect</span> sur toutes les formes et sur toutes les échelles.</p>
+          </div>
+        </div>
+      </div>
+    </div>       
   </section>
+  <section>
+    <div id="engagement">
+      <h1>Impliqué et engagé</h1>
+      <div id="bouton_engagement" class="container">
+        <div class="row">
+          <div class="col-12 col-md-3 text-center">
+            <button class="bouton_rond">
+              <img src="images/nosantennes.png" alt="">
+            </button>
+            <h1>Nos antennes</h1>
+          </div>
+          <div class="col-12 col-md-3 text-center">
+            <button class="bouton_rond">
+              <img src="images/deveniradherant.png" alt="">
+            </button>
+            <h1>Devenir adhéreant</h1>
+          </div>
+          <div class="col-12 col-md-3 text-center">
+            <button class="bouton_rond">
+              <img src="images/newsletter.png" alt="">
 
+            </button>
+            <h1>Newsletter</h1>
+          </div>
+          <div class="col-12 col-md-3 text-center">
+            <button class="bouton_rond">
+              <img src="images/dons.png" alt="">
+            </button>
+            <h1>Faire un don</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div id="actualite">
+      <h1>L'actualité</h1>
+      <div id="actus"class="container">
+        <div class="row">
+          <div class="col-12 col-md-4 text-center">
+            <h2>Titre de l'article - Date</h2>
+            <p>Description de l'article</p>
+          </div>
+          <div class="col-12 col-md-4 text-center">
+            <h2>Titre de l'article - Date</h2>
+            <p>Description de l'article</p>          
+          </div>
+          <div class="col-12 col-md-4 text-center">
+            <h2>Titre de l'article - Date</h2>
+            <p>Description de l'article</p>
+          </div>
+        </div>
+      </div>
+    </div>       
+  </section>
 </main>
-<footer>
 
+<footer class="footer-clean">
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-sm-4 col-md-4 item text-center">
+              <h3>L'association</h3>
+              <ul>
+                  <li><a href="#">A propos de nous</a></li>
+                  <li><a href="#">Nous contacter</a></li>
+                  <li><a href="#">Nous soutenir</a></li>
+                  <li><a href="#">Actualités</a></li>
+              </ul>
+          </div>
+          <div class="col-sm-4 col-md-4 item text-center">
+              <h3>Antennes</h3>
+              <ul>
+                  <li><a href="#">Créer une antenne</a></li>
+                  <li><a href="#">Toutes nos antennes</a></li>
+
+              </ul>
+          </div>
+          <div class="col-sm-4 col-md-4 item text text-center">
+              <h3>Ressources</h3>
+              <h3>Mentions Légales</h3>
+              <h3>Parametres des cookies</h3>
+          </div>
+      </div>
+  </div>
 </footer>
 
 </body>
