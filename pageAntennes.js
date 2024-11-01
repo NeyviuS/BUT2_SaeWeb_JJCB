@@ -1,8 +1,7 @@
 import {listeAntennes} from './antennes.js';
 
 const elt = document.querySelector('.txtRecherche');
-elt.addEventListener('input',
-    (e)=>document.querySelector('.partieDetails').textContent = afficherResultatRecherche(elt.value));
+elt.addEventListener('input',()=>afficherResultatRecherche(elt.value));
 
 elt.dispatchEvent(new Event('input'));
 function correspond(antenne, saisie) {

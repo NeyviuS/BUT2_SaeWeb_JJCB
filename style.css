@@ -1,8 +1,8 @@
 /*header*/
 
 #banner {
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     position: fixed;
     background-color: #ffffff;
     width: 100%;

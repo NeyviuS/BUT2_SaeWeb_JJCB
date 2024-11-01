@@ -4,28 +4,31 @@ export const listeAntennes = [
         adresse: '10 Rue Saint-Julien',
         ville: 'Rouen',
         CP: '76100',
-        page:"                        <p class=\"fld_adresse\">\n" +
-            "                Maison des Associations 10-12 rue Saint Julien                       \n" +
-            "        <br>76000&nbsp;                          \n" +
-            "        Rouen        </p>\n" +
-            "                                <p class=\"fld_tel1\">\n" +
-            "                               \n" +
-            "        07 71 77 72 35&nbsp;\n" +
-            "        </p>\n" +
+        page:"<p class=\"fld_adresse\">\n" +
+            "    Maison des Associations, 10-12 rue Saint Julien<br>76000 Rouen\n" +
+            "</p>\n" +
             "\n" +
-            "                <p class=\"fld_mel\">\n" +
-            "                <joomla-hidden-mail is-link=\"1\" is-email=\"1\" first=\"ZnJhbmNlZGVwcmVzc2lvbi5ub3JtYW5kaWU=\" last=\"eWFob28uZnI=\" text=\"ZnJhbmNlZGVwcmVzc2lvbi5ub3JtYW5kaWVAeWFob28uZnI=\" base=\"\"><a href=\"mailto:francedepression.normandie@yahoo.fr\" base=\"\">francedepression.normandie@yahoo.fr</a></joomla-hidden-mail></p>\n" +
-            "        <p><span style=\"font-size: 14pt;\"><strong>Calendrier à partir de SEPTEMBRE 2023</strong></span></p>\n" +
-            "<p><strong><span style=\"font-size: 12pt;\">Écoute téléphonique nationale au 07 84 96 88 28</span><i>&nbsp;</i></strong><strong><em>du lundi au samedi&nbsp;</em></strong><strong><em>de 10h à 20h, et</em></strong><i><b><b>&nbsp;le dimanche de 14h à 20h</b><i></i>.</b></i></p>\n" +
-            "<p><span style=\"font-size: 12pt;\"><b>&nbsp;</b></span></p>\n" +
-            "<p><b>Prochaines rencontres :</b></p>\n" +
-            "<p>Les rencontres ont lieu à <b><span style=\"text-decoration: underline;\">Rouen</span></b>: Maison des Associations - 10-12 rue Saint Julien 76100 Rouen St Sever</p>\n" +
-            "<p><span style=\"font-size: 12pt;\"><b>Groupe de médiation ou de parole</b></span></p>\n" +
+            "<p class=\"fld_tel1\">07 71 77 72 35</p>\n" +
+            "\n" +
+            "<p class=\"fld_mel\">\n" +
+            "    <a href=\"mailto:francedepression.normandie@yahoo.fr\">francedepression.normandie@yahoo.fr</a>\n" +
+            "</p>\n" +
+            "\n" +
+            "<p><strong style=\"font-size: 14pt;\">Calendrier à partir de SEPTEMBRE 2023</strong></p>\n" +
+            "\n" +
+            "<p><strong style=\"font-size: 12pt;\">Écoute téléphonique nationale au 07 84 96 88 28</strong><br>\n" +
+            "   du lundi au samedi de 10h à 20h, et le dimanche de 14h à 20h.\n" +
+            "</p>\n" +
+            "\n" +
+            "<p><strong>Prochaines rencontres :</strong></p>\n" +
+            "<p>Les rencontres ont lieu à <u>Rouen</u> : Maison des Associations - 10-12 rue Saint Julien, 76100 Rouen St Sever</p>\n" +
+            "\n" +
+            "<p style=\"font-size: 12pt;\"><strong>Groupe de médiation ou de parole</strong></p>\n" +
             "<p><strong>Lundi 25 septembre 2023 de 18h00 à 20h00</strong></p>\n" +
-            "<p>Puis tous les 1er et 4ème lundi de chaque mois de 18h00 à 20h00.</p>\n" +
-            "<p>&nbsp;</p>\n" +
-            "<p><strong><span style=\"font-size: 12pt;\">Groupe de parole</span></strong></p>\n" +
-            "<p><b>Tous les 2ème jeudi de chaque mois de 18h30 à 20h00.</b></p>\n"
+            "<p>Puis tous les 1er et 4ème lundis de chaque mois de 18h00 à 20h00.</p>\n" +
+            "\n" +
+            "<p><strong style=\"font-size: 12pt;\">Groupe de parole</strong></p>\n" +
+            "<p><strong>Tous les 2ème jeudis de chaque mois de 18h30 à 20h00.</strong></p>\n"
     },
     {
         nom: 'France Dépression Grand Paris Île-de-France',
@@ -37,7 +40,7 @@ export const listeAntennes = [
             "</p>\n" +
             "                   \n" +
             "<p class=\"fld_mel\">\n" +
-            "\t<a href=\"mailto:paris@francedepression.fr\" base=\"\">paris@francedepression.fr</a>\n" +
+            "\t<a href=\"mailto:paris@francedepression.fr\">paris@francedepression.fr</a>\n" +
             "</p>\n" +
             "\n" +
             "\n" +
