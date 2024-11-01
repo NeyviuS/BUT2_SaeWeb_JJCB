@@ -1,0 +1,128 @@
+:root {
+    --bordradius: 30px;
+    --couleur-titre: #5274A7;
+    --background-light: #F5F7FA;
+    --couleur-textes: #1D3557;
+    --couleur-bordures: #457B9D;
+}
+
+body {
+    background-color: #BCD9DD;
+    color: var(--couleur-textes); /* Texte en bleu sombre */
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    color: var(--couleur-titre); /* Bleu doux pour les titres */
+}
+
+#titrePage {
+    margin-top: 8%;
+    text-align: center;
+}
+
+article {
+    border: 1px solid var(--couleur-bordures);
+    background-color: var(--background-light);
+    margin: 2% auto;
+    text-align: center;
+    width: 82%;
+    border-radius: var(--bordradius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajout d'ombre */
+}
+
+#zoneMap {
+    height: 25em;
+    display: flex;
+    margin-left: 10%;
+    border-radius: var(--bordradius);
+    width: 80%;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--bordradius);
+}
+
+.partieRecherche, #zoneRechercheDetails {
+    width: 100%;
+    height: 40%;
+    background-color: var(--background-light);
+    border-radius: var(--bordradius);
+    border: 1px solid var(--couleur-titre);
+}
+
+#zoneRechercheDetails {
+    padding-left: 0;
+    padding-top: 0;
+    width: 80%;
+}
+
+.partieDetails {
+    color: var(--couleur-textes);
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin: 1% 5%;
+}
+
+#detailsAntenne {
+    border: 1px solid var(--couleur-titre);
+    background-color: var(--background-light);
+    border-radius: var(--bordradius);
+    text-align: center;
+}
+
+summary {
+    border-radius: var(--bordradius);
+    background-color: var(--couleur-bordures);
+    padding: 1.5em;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+summary:hover {
+    background-color: var(--couleur-titre);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+#paragrAntenne {
+    padding: 1.5em;
+    margin: 1em 0;
+    background-color: #ffffff;
+    border: 1px solid #e1e1e1;
+    border-radius: 15px;
+    color: var(--couleur-textes);
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: var(--couleur-titre);
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+    outline: none;
+}
+
+section{
+    color: #423E71;
+    font-family: 'Miadmi One', sans-serif;
+    margin: 10%;
+    margin-top: 5%;
+}
+a{
+    color: #3B8EDA;
+}
