@@ -32,11 +32,12 @@ li a {
 .images-container {
     display: flex;
     gap: 10px;
-  }
-  .images-container img {
+}
+
+.images-container img {
     width: 60px;
     height: auto;
-  }
+}
 section {
     color: white;
 }
@@ -106,6 +107,7 @@ section {
 
 .surligner {
     color: darkblue;
+    font-weight: bold;
 }
 
 /*Engagement: Partie orange*/
@@ -221,4 +223,63 @@ section {
 
 .item2{
     padding-top: 1.5cm;
+}
+
+/* Qui-sommes-nous */
+
+/* Partie violette */
+
+main section:first-of-type {
+    padding-top: 5%;
+}
+
+h1 {
+    padding-top: 1.5cm;
+    padding-bottom: 1.5cm;
+    text-align: center;
+}
+
+#qui-sommes-nous {
+    background-color: mediumpurple;
+}
+
+#qui-sommes-nous > p {
+    margin:0;
+    padding-left:15%;
+    padding-right:15%;
+    padding-bottom: 5%;
+    font-size: 1.7em;
+}
+
+#nos-missions {
+    background-color: #6FBB75;
+    font-size: 2em;
+}
+
+.surligner-green {
+    color: #38623C;
+    font-weight: bold;
+}
+
+#section-co-presidentes {
+    background-color: #C1D67E;
+}
+
+
+
+.bloc-co-presidente {
+    background-color: white;
+    color: black;
+    border-style: groove;
+    border-radius: 2em;
+    max-width: 30%;
+}
+
+.bloc-co-presidente > p {
+    margin: 1em;
+}
+
+.img-copresidentes {
+    border-radius: 2em;
+    width: 100%;
 }
