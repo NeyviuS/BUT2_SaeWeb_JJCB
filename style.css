@@ -1,34 +1,42 @@
 /*header*/
 
+header {
+    position: fixed;
+}
+
 #banner {
     top: 0;
     left: 0;
-    position: fixed;
-    background-color: #ffffff;
-    width: 100%;
-    padding:1em;
+    background-color: white;
+    width: 100vw;
+    height: 120px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    z-index: 1000;
-    text-decoration: underline;
-    font-size: 18px;
+    z-index: 9999;
 }
 
 
-nav ul {
+#banner > nav ul {
     list-style-type: none;
     display: flex;
+    margin: 0;
 }
 
-nav ul li {
+#banner > nav ul li {
     padding-left: 1.5cm;
     font-size: 18px;
 }
 
 li a {
     color: black;
+    text-decoration: none;
+}
+
+li a:hover {
+    text-decoration: none;
+    color: inherit;
 }
 
 .images-container {
@@ -40,8 +48,34 @@ li a {
     width: 60px;
     height: auto;
 }
+
 section {
     color: white;
+}
+
+#barre_info {
+    height: 40px;
+    background-color: limegreen;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#barre_info > p {
+    margin: 0;
+    padding-left: 16px;
+    text-align: center;
+    flex: auto;
+    color:white;
+}
+
+#close_barre_info {
+    cursor: pointer;
+    padding-right: 16px;
+    padding-bottom: 4px;
+    font-size: 2em;
+    color: whitesmoke;
 }
 
 /*Premiere section: partie bleue*/
@@ -53,6 +87,8 @@ section {
     background-color: dodgerblue;
     align-items: center;
     justify-content: space-around;
+    text-align: left;
+    flex-wrap: wrap-reverse;
     
 }
 
@@ -67,9 +103,14 @@ section {
     display: flex;
     flex-direction: column;
     max-width: 40%;
+    min-width: 512px;
 }
 
-#contact {
+#home img {
+
+}
+
+#button_contact {
     background-color: limegreen;
     color: white;
     width: 70%;
@@ -186,8 +227,8 @@ section {
 
 .footer-clean {
     padding:50px 0;
-    background-color:#fff;
-    color:#4b4c4d;
+    background-color:#5A6A94;
+    color:white;
   }
   
   .footer-clean h3 {
@@ -231,57 +272,12 @@ section {
 
 /* Partie violette */
 
-#qui-sommes-nous h1 {
-    padding-top: 10%;
+main section:first-of-type {
+    padding-top: 160px;
 }
 
-h1 {
+.title {
     padding-top: 1.5cm;
     padding-bottom: 1.5cm;
     text-align: center;
-}
-
-#qui-sommes-nous {
-    background-color: mediumpurple;
-}
-
-#qui-sommes-nous > p {
-    margin:0;
-    padding-left:15%;
-    padding-right:15%;
-    padding-bottom: 5%;
-    font-size: 1.7em;
-}
-
-#nos-missions {
-    background-color: #6FBB75;
-    font-size: 2em;
-}
-
-.surligner-green {
-    color: #38623C;
-    font-weight: bold;
-}
-
-#section-co-presidentes {
-    background-color: #C1D67E;
-}
-
-
-
-.bloc-co-presidente {
-    background-color: white;
-    color: black;
-    border-style: groove;
-    border-radius: 2em;
-    max-width: 30%;
-}
-
-.bloc-co-presidente > p {
-    margin: 1em;
-}
-
-.img-copresidentes {
-    border-radius: 2em;
-    width: 100%;
 }

@@ -4,43 +4,51 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleQuiSommesNous.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Miadmi+One&display=swap" rel="stylesheet">
+    <script src="script.js" type="module"></script>
 </head>
 <body>
-<header id="banner">
-    <a href="./index.html">
-        <img src="images/image.png" alt="Logo de l'association France Dépression">
-    </a>
-    <nav>
-        <ul>
-            <li>
-              <a href="./quisommesnous.html">L'ASSOCIATION</a>
-            </li>
-            <li>
-              <a href="./antennes.html">L'ANTENNES</a>
-            </li>
-            <li>
-              <a href="">RESSOURCES</a>
-            </li>
-          </ul>
-    </nav>
-    <div class="images-container">
-        <img src="images/insta.png" alt="Image 1" >
-        <img src="images/linkedin.png" alt="Image 2">
+<header>
+    <div id="banner">
+        <a href="./index.html">
+            <img src="images/image.png" alt="Logo de l'association France Dépression">
+        </a>
+        <nav>
+            <ul>
+                <li>
+                  <a href="./quisommesnous.html">L'ASSOCIATION</a>
+                </li>
+                <li>
+                  <a href="./antennes.html">L'ANTENNES</a>
+                </li>
+                <li>
+                  <a href="">RESSOURCES</a>
+                </li>
+              </ul>
+        </nav>
+        <div class="images-container">
+            <img src="images/insta.png" alt="Image 1" >
+            <img src="images/linkedin.png" alt="Image 2">
+        </div>
+    </div>
+    <div id="barre_info">
+        <p>Numéro d’écoute : 07 84 96 88 28 (Lundi au Samedi 10h-20h, Dimanche 14h-20h)</p>
+        <span id="close_barre_info">×</span>
     </div>
 </header>
 <main>
     <section>
         <div id="qui-sommes-nous">
-            <h1>Qui sommes nous ?</h1>
+            <h1 class="title">Qui sommes nous ?</h1>
             <p>France Dépression, créée en 1992, est une association loi 1901 sans but lucratif et reconnue d’intérêt général. <br><br>
                 L’Association agit au cœur de la cité, au travers de différentes actions, afin d’œuvrer à une meilleure prise en charge des personnes concernées ainsi qu’à une meilleure information sur les causes et les conséquences de la <span class="surligner">dépression et des troubles bipolaires</span>. A cet effet, France Dépression a pour vocation d’être un espace ressources, physique et virtuel, rassemblant un maximum d’information disponible et adéquate sur les différentes formes de dépression et favorisant les échanges et le partage d’expériences entre les personnes.</p>
         </div>
     </section>
     <section>
         <div id="nos-missions">
-            <h1>Nos missions</h1>
+            <h1 class="title">Nos missions</h1>
             <div id="missions" class="container">
                 <div class="row">
                     <div class="col-12 col-md-4 text-center">
@@ -61,9 +69,9 @@
     </section>
     <section>
         <div id="section-co-presidentes">
-            <h1>Les co-présidentes</h1>
+            <h1 class="title">Les co-présidentes</h1>
             <div class="container">
-                <div class="row d-flex justify-content-around">
+                <div class="row d-flex justify-content-around pb-5">
                     <div class="bloc-co-presidente">
                         <img src="images/claudie-tondon-bernard-300.png" class="img-copresidentes" alt="">
                         <p>Claudie TONDON-BERNARD, ex-présidente de France Dépréssion et co-présidente depuis 2022</p>

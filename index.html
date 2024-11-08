@@ -6,29 +6,36 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Miadmi+One&display=swap" rel="stylesheet">
+  <script src="script.js" type="module"></script>
 </head>
 <body>
-<header id="banner">
-  <a href="./index.html">
-    <img src="images/image.png" alt="Logo de l'association France Dépression">
-  </a>
-  <nav>
-    <ul>
-      <li>
-        <a href="./quisommesnous.html">L'ASSOCIATION</a>
-      </li>
-      <li>
-        <a href="./antennes.html">L'ANTENNES</a>
-      </li>
-      <li>
-        <a href="">RESSOURCES</a>
-      </li>
-    </ul>
-  </nav>
+<header>
+  <div id="banner">
+    <a href="./index.html">
+      <img src="images/image.png" alt="Logo de l'association France Dépression">
+    </a>
+    <nav>
+      <ul>
+        <li>
+          <a href="./quisommesnous.html">L'ASSOCIATION</a>
+        </li>
+        <li>
+          <a href="./antennes.html">L'ANTENNES</a>
+        </li>
+        <li>
+          <a href="">RESSOURCES</a>
+        </li>
+      </ul>
+    </nav>
     <div class="images-container">
       <img src="images/insta.png" alt="Image 1" >
       <img src="images/linkedin.png" alt="Image 2">
     </div>
+  </div>
+  <div id="barre_info">
+    <p>Numéro d’écoute : 07 84 96 88 28 (Lundi au Samedi 10h-20h, Dimanche 14h-20h)</p>
+    <span id="close_barre_info">×</span>
+  </div>
 </header>
 <main>
   <section>
@@ -36,7 +43,7 @@
       <div>
         <h1>Savez-vous que 13% des français sont atteints de dépression ?</h1>
         <p>C'est tout à fait normal d'avoir des coups de mou, mais le plus important est d'en parler.</p>
-        <button id="contact">Contactez-nous dès maintenant !</button>
+        <button id="button_contact">Contactez-nous dès maintenant !</button>
       </div>
       <img class="img" src="images/OIP.jpg" alt="">
     </div>
@@ -44,9 +51,9 @@
   </section>
   <section>
     <div id="presentation">
-      <h1>Qui sommes nous ?</h1>
+      <h1 class="title">Qui sommes nous ?</h1>
       <p>France Dépression est une association fondée en 1992 ayant pour mission :</p>
-      <div id="missions"class="container">
+      <div id="missions" class="container">
         <div class="row">
           <div class="col-12 col-md-4 text-center">
             <img src="images/soutien.png" alt="" class="img-col">
@@ -66,7 +73,7 @@
   </section>
   <section>
     <div id="engagement">
-      <h1>Impliqué et engagé</h1>
+      <h1 class="title">Impliqué et engagé</h1>
       <div id="bouton_engagement" class="container">
         <div class="row">
           <div class="col-12 col-md-3 text-center">

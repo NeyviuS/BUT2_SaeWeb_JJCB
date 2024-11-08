@@ -1,0 +1,46 @@
+#qui-sommes-nous {
+    background-color: mediumpurple;
+}
+
+#qui-sommes-nous > p {
+    margin:0;
+    padding-left:15%;
+    padding-right:15%;
+    padding-bottom: 5%;
+    font-size: 1.7em;
+}
+
+#nos-missions {
+    background-color: #6FBB75;
+    font-size: 2em;
+}
+
+.surligner-green {
+    color: #38623C;
+    font-weight: bold;
+}
+
+#section-co-presidentes {
+    background-color: #C1D67E;
+}
+
+
+
+.bloc-co-presidente {
+    background-color: white;
+    color: black;
+    border-style: groove;
+    border-radius: 32px;
+
+    width: 25%;
+}
+
+.bloc-co-presidente > p {
+    margin: 1em;
+}
+
+.img-copresidentes {
+    border-radius: 32px 32px 0 0;
+    width: 100%;
+    border-bottom-style: solid;
+}
