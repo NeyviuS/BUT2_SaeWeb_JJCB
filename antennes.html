@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="styleAntennes.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Miadmi+One&display=swap" rel="stylesheet">
   <script src="pageAntennes.js" type="module"></script>
 </head>
 <body>
 
 <header id="banner">
-  <img src="images/image.png" alt="Logo de l'association France Dépression">
+  <a href="./index.html">
+    <img src="images/image.png" alt="Logo de l'association France Dépression">
+  </a>
   <nav>
     <ul>
       <li>
-        <a href="">L'ASSOCIATION</a>
+        <a href="./quisommesnous.html">L'ASSOCIATION</a>
       </li>
       <li>
-        <a href="">L'ANTENNES</a>
+        <a href="./antennes.html">L'ANTENNES</a>
       </li>
       <li>
         <a href="">RESSOURCES</a>
@@ -53,11 +57,39 @@
       <ul id="listeAntennes"></ul>
     </div>
   </article>
-  <section>
+  <section id= "creerantenne">
     Vous n’avez pas trouvé d’antenne à proximité de chez vous ? <a href="">Créez-en une dès maintenant</a> ou contactez-nous via <a>contact@francedepression.fr</a> ou au <a>07 84 96 88 28</a>.
   </section>
 
 </main>
 
+<footer class="footer-clean">
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-sm-4 col-md-4 item text-center">
+              <h3>L'association</h3>
+              <ul>
+                  <li><a href="#">A propos de nous</a></li>
+                  <li><a href="#">Nous contacter</a></li>
+                  <li><a href="#">Nous soutenir</a></li>
+                  <li><a href="#">Actualités</a></li>
+              </ul>
+          </div>
+          <div class="col-sm-4 col-md-4 item text-center">
+              <h3>Antennes</h3>
+              <ul>
+                  <li><a href="#">Créer une antenne</a></li>
+                  <li><a href="#">Toutes nos antennes</a></li>
+
+              </ul>
+          </div>
+          <div class="col-sm-4 col-md-4 item text text-center">
+              <h3>Ressources</h3>
+              <h3>Mentions Légales</h3>
+              <h3>Parametres des cookies</h3>
+          </div>
+      </div>
+  </div>
+</footer>
 </body>
 </html>

@@ -12,6 +12,8 @@
     align-items: center;
     justify-content: space-around;
     z-index: 1000;
+    text-decoration: underline;
+    font-size: 18px;
 }
 
 
@@ -229,8 +231,8 @@ section {
 
 /* Partie violette */
 
-main section:first-of-type {
-    padding-top: 5%;
+#qui-sommes-nous h1 {
+    padding-top: 10%;
 }
 
 h1 {
