@@ -4,29 +4,45 @@ header {
     position: fixed;
 }
 
+/* Logo France Dépression */
+
+#banner > a {
+    margin-left: 100px;
+}
+
+#banner > a > img {
+    width: 128px;
+}
+
+/* Flexbox avec le logo + navbar ou menu hamburger pour petit écran */
 #banner {
-    top: 0;
-    left: 0;
-    background-color: white;
     width: 100vw;
     height: 120px;
+    background-color: white;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    z-index: 9999;
+    justify-content: space-between;
 }
 
+nav, #buttonMenu {
+    margin-right: 100px;
+}
 
-#banner > nav ul {
+nav ul {
+    margin: 0;
     list-style-type: none;
     display: flex;
-    margin: 0;
+    align-items: center;
 }
 
-#banner > nav ul li {
-    padding-left: 1.5cm;
+nav ul li {
+    padding: 16px;
     font-size: 18px;
+}
+
+ul {
+    padding : 0;
+    list-style-type: none;
 }
 
 li a {
@@ -36,17 +52,65 @@ li a {
 
 li a:hover {
     text-decoration: none;
-    color: inherit;
+    color: darkblue;
 }
 
-.images-container {
+#separateur {
+    padding: 0;
+    margin: auto 17px;
+    display: inline-block;
+    height: 24px;
+    width: 1px;
+    background-color: black;
+}
+
+.social-media-container {
     display: flex;
-    gap: 10px;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-.images-container img {
-    width: 60px;
-    height: auto;
+.social-media-container img {
+    width: 32px;
+}
+
+#buttonMenu {
+    display: none;
+    width: 32px;
+    height: 32px;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg);
+    background-color: inherit;
+    border: inherit;
+    cursor: inherit;
+}
+
+.menu {
+    top: 120px;
+    right: 32px;
+    width: 200px;
+    display: none;
+    position: absolute;
+    background-color: white;
+}
+
+.menu > ul {
+    margin: 0;
+}
+
+.menu a {
+    display: block;
+    color: black;
+    padding: 20px;
+    transition: background-color 0.3s;
+}
+
+
+#menumobile .social-media-container > a {
+    padding: 20px 34px;
+}
+
+.menu a:hover {
+    background-color: whitesmoke;
 }
 
 section {
@@ -59,7 +123,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    z-index: 500;
 }
 
 #barre_info > p {
