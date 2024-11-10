@@ -2,6 +2,7 @@
 
 header {
     position: fixed;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3)
 }
 
 /* Logo France Dépression */
@@ -32,10 +33,6 @@ nav > ul {
     list-style-type: none;
     display: flex;
     align-items: center;
-}
-
-nav > ul li {
-    font-size: 18px;
 }
 
 nav > ul > li > a {
@@ -100,6 +97,7 @@ li a:hover {
     display: none;
     position: absolute;
     background-color: white;
+    font-size: 18px;
 }
 
 .menu ul {
