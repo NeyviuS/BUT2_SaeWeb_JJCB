@@ -2,20 +2,12 @@
     background-color: mediumpurple;
 }
 
-#qui-sommes-nous > p {
-    margin:0;
-    padding-left:15%;
-    padding-right:15%;
-    padding-bottom: 5%;
-    font-size: 1.7em;
-}
-
 #nos-missions {
     background-color: #6FBB75;
     font-size: 2em;
 }
 
-.surligner-green {
+.surligner-purple {
     color: #38623C;
     font-weight: bold;
 }
@@ -24,6 +16,12 @@
     background-color: #C1D67E;
 }
 
+#co-presidentes-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 100px
+}
 
 
 .bloc-co-presidente {
@@ -31,8 +29,9 @@
     color: black;
     border-style: groove;
     border-radius: 32px;
-
-    width: 25%;
+    width: 20%;
+    min-width: 250px;
+    margin: 16px 64px
 }
 
 .bloc-co-presidente > p {

@@ -11,13 +11,12 @@ header {
 }
 
 #banner > a > img {
-    width: 128px;
+    height: 128px;
 }
 
 /* Flexbox avec le logo + navbar ou menu hamburger pour petit écran */
 #banner {
     width: 100vw;
-    height: 120px;
     background-color: white;
     display: flex;
     align-items: center;
@@ -28,16 +27,19 @@ nav, #buttonMenu {
     margin-right: 100px;
 }
 
-nav ul {
+nav > ul {
     margin: 0;
     list-style-type: none;
     display: flex;
     align-items: center;
 }
 
-nav ul li {
-    padding: 16px;
+nav > ul li {
     font-size: 18px;
+}
+
+nav > ul > li > a {
+    padding: 52px 16px;
 }
 
 ul {
@@ -70,6 +72,10 @@ li a:hover {
     justify-content: space-evenly;
 }
 
+.social-media-container:first-child {
+    margin-left: 10px;
+}
+
 .social-media-container img {
     width: 32px;
 }
@@ -84,17 +90,26 @@ li a:hover {
     cursor: inherit;
 }
 
+#menu-association {
+    left: inherit;
+    top: 128px;
+}
+
 .menu {
-    top: 120px;
-    right: 32px;
     width: 200px;
     display: none;
     position: absolute;
     background-color: white;
 }
 
-.menu > ul {
+.menu ul {
+    display: flex;
+    flex-direction: column;
     margin: 0;
+}
+
+.menu li {
+    padding: 0;
 }
 
 .menu a {
@@ -102,6 +117,11 @@ li a:hover {
     color: black;
     padding: 20px;
     transition: background-color 0.3s;
+}
+
+#menumobile {
+    top: 64px;
+    right: 0;
 }
 
 
@@ -144,44 +164,7 @@ section {
 
 /*Premiere section: partie bleue*/
 
-#home {
-    display: flex;
 
-    padding: 7.3%;
-    background-color: dodgerblue;
-    align-items: center;
-    justify-content: space-around;
-    text-align: left;
-    flex-wrap: wrap-reverse;
-    
-}
-
-#home p {
-    padding-top: 1cm;
-    font-weight: bold;
-    padding-bottom: 1cm;
-
-}
-
-#home div {
-    display: flex;
-    flex-direction: column;
-    max-width: 40%;
-    min-width: 512px;
-}
-
-#home img {
-
-}
-
-#button_contact {
-    background-color: limegreen;
-    color: white;
-    width: 70%;
-    height: 72px;
-    border-radius: 10px;
-
-}
 
 /*Presentation: partie violette*/
 #presentation {
@@ -207,9 +190,35 @@ section {
     height: auto;
 }
 
-#missions {
-    padding-top: 1.5cm ;
-    padding-bottom: 1.5cm;
+#missions-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 100px
+}
+
+#missions-container p {
+    font-size: 24px;
+    margin: 25px 0;
+}
+
+.icon  {
+    max-width: 100px;
+    transition: scale 0.3s;
+}
+
+.icon:hover {
+    scale: 110%;
+}
+
+.bloc_mission {
+    min-width: 250px;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 32px;
 }
 
 .surligner {
@@ -229,13 +238,6 @@ section {
     text-align: center;
 }
 
-#engagement p {
-    padding-top: 2cm;
-    font-weight: bold;
-    text-align: center;
-    font-family: 'Miadmi One', sans-serif;
-    font-size: large;
-}
 
 #bouton_engagement {
     padding-top: 1.5cm ;
@@ -244,21 +246,18 @@ section {
 
 .bouton_rond {
     background-color: white;
-    color: white;
     width: 150px;
     height: 150px;
-    border-radius: 50%; 
-
-
+    border-radius: 50%;
 }
 
 .bouton_rond:hover {
-    background-color: lightgrey;
+    background-color: whitesmoke;
   }
 
 .bouton_rond img {
-    width: 60%; /* Ajuster la taille de l'image */
-    height: auto; /* Conserver le ratio de l'image */
+    width: 60%;
+    height: auto;
 }
 
 
@@ -334,11 +333,17 @@ section {
 /* Partie violette */
 
 main section:first-of-type {
-    padding-top: 160px;
+    padding-top: 168px;
 }
 
 .title {
     padding-top: 1.5cm;
     padding-bottom: 1.5cm;
     text-align: center;
+}
+
+.regular-text {
+    margin:0;
+    padding: 0 15% 5% 15%;
+    font-size: 24px;
 }

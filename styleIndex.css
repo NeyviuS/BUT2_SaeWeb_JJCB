@@ -1,0 +1,74 @@
+#home > div {
+    display: flex;
+    background-color: dodgerblue;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    flex-wrap: wrap-reverse;
+    padding: 64px 0;
+}
+
+#home p {
+    padding: 32px 0;
+
+}
+
+#home > div > div {
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+    min-width: 512px;
+    margin: 32px
+}
+
+#home img {
+    margin: 32px;
+}
+
+#button_contact {
+    background-color: limegreen;
+    color: white;
+    width: 70%;
+    height: 72px;
+    border-radius: 10px;
+
+}
+
+#nos-missions {
+    background-color: #9C94F4;
+}
+
+#nos-missions > p {
+    text-align: center;
+}
+
+.surligner-purple {
+    color: #423E71;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.surligner-purple {
+    text-decoration: none;
+}
+
+#bouton-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 64px 0;
+}
+
+.bloc-bouton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 16px 24px;
+}
+
+.bloc-bouton p {
+    text-wrap: nowrap;
+    font-size: 32px;
+    margin: 32px 0;
+}
