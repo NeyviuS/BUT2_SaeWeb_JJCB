@@ -22,6 +22,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 18px;
 }
 
 nav, #buttonMenu {
@@ -30,7 +31,6 @@ nav, #buttonMenu {
 
 nav > ul {
     margin: 0;
-    list-style-type: none;
     display: flex;
     align-items: center;
 }
@@ -97,7 +97,6 @@ li a:hover {
     display: none;
     position: absolute;
     background-color: white;
-    font-size: 18px;
 }
 
 .menu ul {
