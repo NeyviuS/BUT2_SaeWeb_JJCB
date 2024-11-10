@@ -18,6 +18,7 @@ header {
 /* Flexbox avec le logo + navbar ou menu hamburger pour petit écran */
 #banner {
     width: 100vw;
+    height: 120px;
     background-color: white;
     display: flex;
     align-items: center;
@@ -89,7 +90,7 @@ li a:hover {
 
 #menu-association {
     left: inherit;
-    top: 128px;
+    margin-top: 2.6em;
 }
 
 .menu {
@@ -290,6 +291,11 @@ section {
     padding:48px;
     background-color:#5A6A94;
     color:white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-left: 10%;
+    padding-right: 20%;
   }
   
   .footer-clean h3 {
@@ -316,7 +322,11 @@ section {
   .footer-clean ul a:hover {
     opacity:1;
   }
-  
+
+    footer > img {
+    width: 7%;
+    height: 7%;
+  }
   
 @media (max-width:767px) {
     .footer-clean .item {
@@ -326,7 +336,7 @@ section {
 }
 
 
-/* Qui-sommes-nous */
+/* Qui-sommes-nous (déplacé de style.css)*/
 
 /* Partie violette */
 

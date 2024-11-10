@@ -14,7 +14,6 @@ body {
 #creerantenne{
     text-align: center;
     padding-bottom: 2%;
-    margin-bottom: 2%;
 }
 
 main {
@@ -117,12 +116,16 @@ input[type="text"]:focus {
     outline: none;
 }
 
-section{
+#creerantenne{
     color: #423E71;
     font-family: 'Miadmi One', sans-serif;
-    margin: 10%;
-    margin-top: 5%;
+    padding-top: 2%;
+    font-size: 1.3em;
 }
 a{
     color: #3B8EDA;
+}
+
+.partieRecherche > *, ul#listeAntennes > li{
+    margin-top: 1em;
 }
