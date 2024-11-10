@@ -2,31 +2,46 @@
 
 header {
     position: fixed;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3)
 }
 
+/* Logo France Dépression */
+
+#banner > a {
+    margin-left: 100px;
+}
+
+#banner > a > img {
+    height: 128px;
+}
+
+/* Flexbox avec le logo + navbar ou menu hamburger pour petit écran */
 #banner {
-    top: 0;
-    left: 0;
-    background-color: white;
     width: 100vw;
-    height: 120px;
+    background-color: white;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    z-index: 9999;
+    justify-content: space-between;
 }
 
+nav, #buttonMenu {
+    margin-right: 100px;
+}
 
-#banner > nav ul {
+nav > ul {
+    margin: 0;
     list-style-type: none;
     display: flex;
-    margin: 0;
+    align-items: center;
 }
 
-#banner > nav ul li {
-    padding-left: 1.5cm;
-    font-size: 18px;
+nav > ul > li > a {
+    padding: 52px 16px;
+}
+
+ul {
+    padding : 0;
+    list-style-type: none;
 }
 
 li a {
@@ -36,17 +51,84 @@ li a {
 
 li a:hover {
     text-decoration: none;
-    color: inherit;
+    color: darkblue;
 }
 
-.images-container {
+#separateur {
+    padding: 0;
+    margin: auto 17px;
+    display: inline-block;
+    height: 24px;
+    width: 1px;
+    background-color: black;
+}
+
+.social-media-container {
     display: flex;
-    gap: 10px;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-.images-container img {
-    width: 60px;
-    height: auto;
+.social-media-container:first-child {
+    margin-left: 10px;
+}
+
+.social-media-container img {
+    width: 32px;
+}
+
+#buttonMenu {
+    display: none;
+    width: 32px;
+    height: 32px;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg);
+    background-color: inherit;
+    border: inherit;
+    cursor: inherit;
+}
+
+#menu-association {
+    left: inherit;
+    top: 128px;
+}
+
+.menu {
+    width: 200px;
+    display: none;
+    position: absolute;
+    background-color: white;
+    font-size: 18px;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.menu li {
+    padding: 0;
+}
+
+.menu a {
+    display: block;
+    color: black;
+    padding: 20px;
+    transition: background-color 0.3s;
+}
+
+#menumobile {
+    top: 64px;
+    right: 0;
+}
+
+
+#menumobile .social-media-container > a {
+    padding: 20px 34px;
+}
+
+.menu a:hover {
+    background-color: whitesmoke;
 }
 
 section {
@@ -59,7 +141,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    z-index: 500;
 }
 
 #barre_info > p {
@@ -80,44 +162,7 @@ section {
 
 /*Premiere section: partie bleue*/
 
-#home {
-    display: flex;
 
-    padding: 7.3%;
-    background-color: dodgerblue;
-    align-items: center;
-    justify-content: space-around;
-    text-align: left;
-    flex-wrap: wrap-reverse;
-    
-}
-
-#home p {
-    padding-top: 1cm;
-    font-weight: bold;
-    padding-bottom: 1cm;
-
-}
-
-#home div {
-    display: flex;
-    flex-direction: column;
-    max-width: 40%;
-    min-width: 512px;
-}
-
-#home img {
-
-}
-
-#button_contact {
-    background-color: limegreen;
-    color: white;
-    width: 70%;
-    height: 72px;
-    border-radius: 10px;
-
-}
 
 /*Presentation: partie violette*/
 #presentation {
@@ -143,9 +188,35 @@ section {
     height: auto;
 }
 
-#missions {
-    padding-top: 1.5cm ;
-    padding-bottom: 1.5cm;
+#missions-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 100px
+}
+
+#missions-container p {
+    font-size: 24px;
+    margin: 25px 0;
+}
+
+.icon  {
+    max-width: 100px;
+    transition: scale 0.3s;
+}
+
+.icon:hover {
+    scale: 110%;
+}
+
+.bloc_mission {
+    min-width: 250px;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 32px;
 }
 
 .surligner {
@@ -165,13 +236,6 @@ section {
     text-align: center;
 }
 
-#engagement p {
-    padding-top: 2cm;
-    font-weight: bold;
-    text-align: center;
-    font-family: 'Miadmi One', sans-serif;
-    font-size: large;
-}
 
 #bouton_engagement {
     padding-top: 1.5cm ;
@@ -180,21 +244,18 @@ section {
 
 .bouton_rond {
     background-color: white;
-    color: white;
     width: 150px;
     height: 150px;
-    border-radius: 50%; 
-
-
+    border-radius: 50%;
 }
 
 .bouton_rond:hover {
-    background-color: lightgrey;
+    background-color: whitesmoke;
   }
 
 .bouton_rond img {
-    width: 60%; /* Ajuster la taille de l'image */
-    height: auto; /* Conserver le ratio de l'image */
+    width: 60%;
+    height: auto;
 }
 
 
@@ -270,11 +331,17 @@ section {
 /* Partie violette */
 
 main section:first-of-type {
-    padding-top: 160px;
+    padding-top: 168px;
 }
 
 .title {
     padding-top: 1.5cm;
     padding-bottom: 1.5cm;
     text-align: center;
+}
+
+.regular-text {
+    margin:0;
+    padding: 0 15% 5% 15%;
+    font-size: 24px;
 }
