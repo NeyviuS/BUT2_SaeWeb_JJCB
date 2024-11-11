@@ -49,7 +49,11 @@ li a {
     text-decoration: none;
 }
 
-li a:hover {
+#button-association {
+    cursor: pointer;
+}
+
+#button-association:hover, li a:hover {
     text-decoration: none;
     color: darkblue;
 }
@@ -239,7 +243,7 @@ section {
 #bouton_engagement {
     padding-top: 1.5cm ;
     padding-bottom: 1.5cm;
-} 
+}
 
 .bouton_rond {
     background-color: white;
@@ -270,13 +274,6 @@ section {
     text-align: center;
 }
 
-#actuialite p {
-    padding-top: 2cm;
-    font-weight: bold;
-    text-align: center;
-    font-family: 'Miadmi One', sans-serif;
-    font-size: large;
-}
 
 #actus  {
     padding-bottom: 2cm;
@@ -295,14 +292,14 @@ section {
     padding-left: 10%;
     padding-right: 20%;
   }
-  
+
   .footer-clean h3 {
     margin-top:0;
     margin-bottom:12px;
     font-weight:bold;
     font-size:16px;
   }
-  
+
   .footer-clean ul {
     padding:0;
     list-style:none;
@@ -310,13 +307,13 @@ section {
     font-size:14px;
     margin-bottom:0;
   }
-  
+
   .footer-clean ul a {
     color:inherit;
     text-decoration:none;
     opacity:0.8;
   }
-  
+
   .footer-clean ul a:hover {
     opacity:1;
   }
@@ -325,7 +322,7 @@ section {
     width: 7%;
     height: 7%;
   }
-  
+
 @media (max-width:767px) {
     .footer-clean .item {
       text-align:center;
