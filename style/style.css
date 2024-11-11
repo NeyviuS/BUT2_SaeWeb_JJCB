@@ -49,11 +49,11 @@ li a {
     text-decoration: none;
 }
 
-#button-association {
+#button-association, #button-association-mobile {
     cursor: pointer;
 }
 
-#button-association:hover, li a:hover {
+#button-association:hover, #button-association-mobile:hover, li a:hover {
     text-decoration: none;
     color: darkblue;
 }
@@ -125,6 +125,13 @@ li a {
     right: 0;
 }
 
+#menu-association-mobile {
+    right: 200px;
+    top: 0;
+
+
+}
+
 
 #menumobile .social-media-container > a {
     padding: 20px 34px;
@@ -163,45 +170,6 @@ section {
     color: whitesmoke;
 }
 
-/*Premiere section: partie bleue*/
-
-
-
-/*Presentation: partie violette*/
-#presentation {
-    background-color: mediumpurple;
-}
-
-#presentation h1{
-    padding-top: 1.5cm;
-    padding-bottom: 1.5cm;
-    text-align: center;
-}
-
-#presentation p {
-    padding-top: 2cm;
-    font-weight: bold;
-    text-align: center;
-    font-family: 'Miadmi One', sans-serif;
-    font-size: large;
-}
-
-.img-col {
-    max-width: 40%;
-    height: auto;
-}
-
-#missions-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 0 100px
-}
-
-#missions-container p {
-    font-size: 24px;
-    margin: 25px 0;
-}
 
 .icon  {
     max-width: 100px;
@@ -226,41 +194,6 @@ section {
     color: darkblue;
     font-weight: bold;
 }
-
-/*Engagement: Partie orange*/
-
-#engagement {
-    background-color: #F4C194;
-}
-
-#engagement h1{
-    padding-top: 1.5cm;
-    padding-bottom: 1.5cm;
-    text-align: center;
-}
-
-
-#bouton_engagement {
-    padding-top: 1.5cm ;
-    padding-bottom: 1.5cm;
-}
-
-.bouton_rond {
-    background-color: white;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-
-.bouton_rond:hover {
-    background-color: whitesmoke;
-  }
-
-.bouton_rond img {
-    width: 60%;
-    height: auto;
-}
-
 
 .footer-clean {
     padding:48px;
@@ -311,7 +244,7 @@ footer > img {
     }
     .secondaire{
         display: none;
-        width: 0px;
+        width: 0;
     }
     footer > img {
         width: 20%;
@@ -320,11 +253,17 @@ footer > img {
 
 }
 
+#missions-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 100px
+}
 
-
-/* Qui-sommes-nous (déplacé de style.css)*/
-
-/* Partie violette */
+#missions-container p {
+    font-size: 24px;
+    margin: 25px 0;
+}
 
 main section:first-of-type {
     padding-top: 168px;

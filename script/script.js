@@ -1,5 +1,4 @@
 const buttonClose = document.querySelector('#close_barre_info')
-
 let barreInfoClosed = false
 
 document.addEventListener('DOMContentLoaded', responsiveBanner)
@@ -31,15 +30,31 @@ buttonClose.addEventListener('click', () => {
 })
 
 const buttonMenuMobile = document.querySelector('#buttonMenu')
+const menuMobile = document.querySelector('#menumobile')
 const buttonAssociation = document.querySelector('#button-association')
+const menuAssociation = document.querySelector('#menu-association')
+const buttonAssociationMobile = document.querySelector('#button-association-mobile')
+const menuAssociationMobile = document.querySelector('#menu-association-mobile')
 
 buttonMenuMobile.addEventListener('click', () => {
-    const menu = document.querySelector('#menumobile')
-    menu.style.display = menu.style.display !== 'block' ? 'block' : 'none';
+    menuMobile.style.display = menuMobile.style.display !== 'block' ? 'block' : 'none';
+})
+
+buttonAssociationMobile.addEventListener('mouseover', () => {
+    menuAssociationMobile.style.display = 'block'
+    menuAssociationMobile.addEventListener('mouseover', () => {
+        menuAssociationMobile.style.display = 'block'
+        menuAssociationMobile.addEventListener('mouseout', () => {
+            menuAssociationMobile.style.display = 'none'
+        })
+    })
+})
+
+buttonAssociationMobile.addEventListener('mouseout', () => {
+    menuAssociationMobile.style.display = 'none'
 })
 
 buttonAssociation.addEventListener('mouseover', () => {
-    const menuAssociation = document.querySelector('#menu-association')
     menuAssociation.style.display = 'block'
     menuAssociation.addEventListener('mouseover', () => {
         menuAssociation.style.display = 'block'
@@ -49,8 +64,9 @@ buttonAssociation.addEventListener('mouseover', () => {
     })
 })
 
+
 buttonAssociation.addEventListener('mouseout', () => {
-    document.querySelector('#menu-association').style.display = 'none'
+    menuAssociation.style.display = 'none'
 })
 
 

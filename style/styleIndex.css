@@ -31,7 +31,6 @@
     width: 70%;
     height: 72px;
     border-radius: 10px;
-
 }
 
 #nos-missions {
@@ -120,4 +119,60 @@
     max-width: 120%;
     height: auto;
     max-height: 40%;
+}
+
+#presentation {
+    background-color: mediumpurple;
+}
+
+#presentation h1{
+    padding-top: 1.5cm;
+    padding-bottom: 1.5cm;
+    text-align: center;
+}
+
+#presentation p {
+    padding-top: 2cm;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Miadmi One', sans-serif;
+    font-size: large;
+}
+
+.img-col {
+    max-width: 40%;
+    height: auto;
+}
+
+
+#engagement {
+    background-color: #F4C194;
+}
+
+#engagement h1{
+    padding-top: 1.5cm;
+    padding-bottom: 1.5cm;
+    text-align: center;
+}
+
+
+#bouton_engagement {
+    padding-top: 1.5cm ;
+    padding-bottom: 1.5cm;
+}
+
+.bouton_rond {
+    background-color: white;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.bouton_rond:hover {
+    background-color: whitesmoke;
+}
+
+.bouton_rond img {
+    width: 60%;
+    height: auto;
 }
