@@ -35,7 +35,7 @@ const buttonAssociation = document.querySelector('#button-association')
 
 buttonMenuMobile.addEventListener('click', () => {
     const menu = document.querySelector('#menumobile')
-    menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+    menu.style.display = menu.style.display !== 'block' ? 'block' : 'none';
 })
 
 buttonAssociation.addEventListener('mouseover', () => {
