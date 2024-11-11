@@ -262,8 +262,6 @@ section {
 }
 
 
-/*Footer*/
-
 .footer-clean {
     padding:48px;
     background-color:#5A6A94;
@@ -273,44 +271,55 @@ section {
     flex-direction: row;
     padding-left: 10%;
     padding-right: 20%;
-  }
+}
 
-  .footer-clean h3 {
+.footer-clean h3 a {
+    text-decoration: none;
     margin-top:0;
     margin-bottom:12px;
     font-weight:bold;
     font-size:16px;
-  }
+    color: white;
+}
 
-  .footer-clean ul {
+.footer-clean ul {
     padding:0;
     list-style:none;
     line-height:1.6;
     font-size:14px;
     margin-bottom:0;
-  }
+}
 
-  .footer-clean ul a {
+.footer-clean ul a {
     color:inherit;
     text-decoration:none;
     opacity:0.8;
-  }
+}
 
-  .footer-clean ul a:hover {
+.footer-clean ul a:hover {
     opacity:1;
-  }
+}
 
-    footer > img {
+footer > img {
     width: 7%;
     height: 7%;
-  }
-
-@media (max-width:767px) {
-    .footer-clean .item {
-      text-align:center;
-      padding-bottom:20px;
-    }
 }
+
+@media (max-width: 800px) {
+    span{
+        flex-direction: column;
+    }
+    .secondaire{
+        display: none;
+        width: 0px;
+    }
+    footer > img {
+        width: 20%;
+        height: 20%;
+    }
+
+}
+
 
 
 /* Qui-sommes-nous (déplacé de style.css)*/
