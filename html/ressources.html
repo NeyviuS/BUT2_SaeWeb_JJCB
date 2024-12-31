@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Ressources</title>
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/styleRessources.css">
+    <script src="../script/pageRessources.js" type="module"></script>
+    <script src="../script/script.js" type="module"></script>
 </head>
 <body>
 <header>
@@ -14,23 +17,77 @@
         <nav>
             <ul>
                 <li>
-                    <a href="quisommesnous.html">L'ASSOCIATION</a>
+                    <a id="button-association">L'ASSOCIATION</a>
+                    <div class="menu" id="menu-association">
+                        <ul>
+                            <li>
+                                <a href="./quisommesnous.html">Qui sommes-nous ?</a>
+                            </li>
+                            <li>
+                                <a href="antennes.html">Edito</a>
+                            </li>
+                            <li>
+                                <a href="">Nous soutenir</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li>
-                    <a href="antennes.html">L'ANTENNES</a>
+                    <a href="antennes.html">NOS ANTENNES</a>
                 </li>
                 <li>
                     <a href="">RESSOURCES</a>
                 </li>
+                <li id="separateur">
+
+                </li>
+                <li>
+                    <div class="social-media-container">
+                        <a href="https://www.instagram.com/francedepression/">
+                            <img src="../images/instagram-logo.png" alt="Instagram">
+                        </a>
+                        <a href="https://fr.linkedin.com/company/france-depression">
+                            <img src="../images/linkedin-logo.png" alt="LinkedIn">
+                        </a>
+                    </div>
+                </li>
             </ul>
         </nav>
-        <div class="images-container">
-            <a href="https://www.instagram.com/francedepression/">
-                <img src="images/insta.png" alt="Instagram" >
-            </a>
-            <a href="https://fr.linkedin.com/company/france-depression">
-                <img src="images/linkedin.png" alt="LinkedIn">
-            </a>
+        <button id="buttonMenu">
+        </button>
+        <div class="menu" id="menumobile">
+            <ul>
+                <li>
+                    <a id="button-association-mobile">L'association</a>
+                    <div class="menu" id="menu-association-mobile">
+                        <ul>
+                            <li>
+                                <a href="./quisommesnous.html">Qui sommes-nous ?</a>
+                            </li>
+                            <li>
+                                <a href="">Edito</a>
+                            </li>
+                            <li>
+                                <a href="">Nous soutenir</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="antennes.html">Nos antennes</a>
+                </li>
+                <li>
+                    <a href="">Ressources</a>
+                </li>
+            </ul>
+            <div class="social-media-container">
+                <a href="https://www.instagram.com/francedepression/">
+                    <img src="../images/instagram-logo.png" alt="Instagram">
+                </a>
+                <a href="https://fr.linkedin.com/company/france-depression">
+                    <img src="../images/linkedin-logo.png" alt="LinkedIn">
+                </a>
+            </div>
         </div>
     </div>
     <div id="barre_info">
@@ -38,5 +95,17 @@
         <span id="close_barre_info">×</span>
     </div>
 </header>
+<main>
+    <section></section>
+    <br><br><br>
+<template id="ressource-template">
+    <div class="ressource">
+        <p class="ressource-title">Titre</p>
+        <p class="ressource-description">Intitulé de la ressource documentaire...</p>
+        <button class="ressource-type">Type de la ressource</button>
+    </div>
+</template>
+<div id="listeRessources"></div>
+</main>
 </body>
 </html>
