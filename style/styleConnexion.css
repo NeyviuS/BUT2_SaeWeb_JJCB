@@ -1,0 +1,172 @@
+#sign {
+    color: black;
+    background: linear-gradient(45deg, whitesmoke, ghostwhite, ghostwhite);
+    display: flex;
+    justify-content: center;
+}
+
+#sign h2 {
+    margin: 0;
+}
+
+#sign > div:first-of-type {
+    background-color: white;
+    width: 468px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    padding-bottom: 32px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+#sign form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 20px 20px 20px;
+}
+
+.div-input {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.div-input label {
+    margin: 0;
+    font-weight: bold;
+    font-size: 16px;
+    color: #555;
+    text-align: left;
+}
+
+#sign form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid darkgray;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#sign form input:focus {
+    border: 1px solid black;
+}
+
+#sign form button {
+    padding: 12px;
+    font-size: 1rem;
+    color: white;
+    background-color: dodgerblue;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#sign form button:hover {
+    background-color: deepskyblue;
+}
+
+#sign > div {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+#sign > div a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#sign > div a:hover {
+    color: #0056b3;
+}
+
+#sign > div > div {
+    margin: 20px 0;
+}
+
+#sign span {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.div-checkbox {
+    display: flex;
+    flex-direction:  row;
+    text-align: left;
+    gap:16px;
+}
+
+.div-checkbox label {
+    font-size: 12px;
+}
+
+.div-checkbox > input {
+    margin-bottom: 8px;
+}
+
+.div-checkbox > input:hover {
+    cursor: pointer;
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.password-container label {
+    margin: 0;
+    font-weight: bold;
+    font-size: 16px;
+    color: #555;
+    text-align: left;
+}
+
+.password-container input {
+    padding-right: 40px; /* Espace pour l'icône */
+    font-size: 16px;
+    border: 1px solid darkgray;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.toggle-password {
+    color: gray;
+    position: absolute;
+    cursor: pointer;
+    top: 31px;
+    left: 345px;
+    padding: 10px;
+    background-color: white;
+    user-select: none;
+    transition: color 0.3s;
+}
+
+.without-label {
+    top: 2px;
+}
+
+.password-container p:hover {
+    color:black;
+}
+
+#error-message {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+#error-message p {
+    border-radius: 8px;
+    background-color: red;
+    color: white;
+    padding: 12px 16px;
+    margin: 0 32px;
+}
+
