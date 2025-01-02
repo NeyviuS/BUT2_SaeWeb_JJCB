@@ -40,6 +40,14 @@ class Authentification {
         return true;
     }
 
+    public function hasDeclinedSurvey(string $email) : bool {
+        $adherent = $this->userRepository->findAdherentByEmail($email);
+        if ($adherent) {
+            return $adherent->hasDeclinedSurvey();
+        }
+        return false;
+    }
+
   private function invalideEmail(string $email) : bool {
     $email = trim($email);
     return !filter_var($email, FILTER_VALIDATE_EMAIL);

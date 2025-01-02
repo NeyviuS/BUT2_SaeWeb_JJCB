@@ -12,13 +12,15 @@ class MariaDBUserRepository implements IUserRepository
     public function saveAdherent(Adherent $adherent): bool
     {
         $stmt = $this->dbConnexion->prepare(
-            "INSERT INTO adhérent (Email, Password, Newsletter) VALUES (:email, :password, :newsletter)"
+            "INSERT INTO adhérent (Email, Password, Newsletter, HasDeclinedSurvey)
+                    VALUES (:email, :password, :newsletter, :hasdeclinedsurvey)"
         );
 
         return $stmt->execute([
             'email' => $adherent->getEmail(),
             'password' => password_hash($adherent->getPassword(), PASSWORD_DEFAULT),
             'newsletter' => $adherent->getNewsletter() === true ? 1 : 0,
+            'hasdeclinedsurvey' => $adherent->hasDeclinedSurvey() === true ? 1 : 0
         ]);
     }
 
@@ -31,8 +33,18 @@ class MariaDBUserRepository implements IUserRepository
         $result = $stmt->fetch(\PDO::FETCH_ASSOC);
 
         if ($result) {
-            return new Adherent($result['Email'], $result['Password'], $result['Newsletter']);
+            return new Adherent($result['Email'], $result['Password'],
+                $result['Newsletter'] === 1,
+                $result['HasDeclinedSurvey'] === 1);
         }
         return null;
     }
+
+    public function declineSurvey(string $email): void {
+        $stmt = $this->dbConnexion->prepare(
+            "UPDATE Adhérent SET HasDeclinedSurvey = 1 WHERE email = :email"
+        );
+        $stmt->execute(['email' => $email]);
+    }
+
 }

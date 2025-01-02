@@ -157,7 +157,7 @@ section {
 
 #barre_info > p {
     margin: 0;
-    padding-left: 16px;
+    padding-left: 32px;
     text-align: center;
     flex: auto;
     color:white;
@@ -165,7 +165,7 @@ section {
 
 #close_barre_info {
     cursor: pointer;
-    padding-right: 16px;
+    padding-right: 32px;
     padding-bottom: 4px;
     font-size: 2em;
     color: whitesmoke;
@@ -194,6 +194,37 @@ section {
 .surligner {
     color: darkblue;
     font-weight: bold;
+}
+
+#survey-banner {
+    background-color: dodgerblue;
+    color: white;
+    position: fixed;
+    bottom: 32px;
+    right : 32px;
+    padding: 10px;
+    width: 256px;
+    border-radius: 16px;
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+#survey-banner a {
+    color:white;
+    text-decoration: underline;
+}
+
+#survey-banner > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#survey-banner button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .footer-clean {

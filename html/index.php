@@ -1,3 +1,12 @@
+<?php
+if (!session_id()) {
+    session_start();
+}
+
+require_once '../app/showSurveyPopup.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -50,7 +59,7 @@
                         <a href="https://fr.linkedin.com/company/france-depression">
                             <img src="../images/linkedin-logo.png" alt="LinkedIn">
                         </a>
-                        <a href="connexion.html">
+                        <a href="connexion.php">
                             <img src="../images/icon_adherent.png" alt="Connexion">
                         </a>
                     </div>
@@ -83,6 +92,9 @@
                 <li>
                     <a href="ressources.html">Ressources</a>
                 </li>
+                <li>
+                    <a href="connexion.php">Se connecter</a>
+                </li>
             </ul>
             <div class="social-media-container">
                 <a href="https://www.instagram.com/francedepression/">
@@ -103,7 +115,7 @@
     <section id="home">
         <div>
             <div>
-                <h1>Savez-vous que 13% des français sont atteints de dépression ?</h1>
+                <h1>Savez-vous que 13% des Français sont atteints de dépression ?</h1>
                 <p class="regular-text">C'est tout à fait normal d'avoir des coups de mou, mais le plus important est
                     d'en parler.</p>
                 <a href="#">
@@ -188,7 +200,7 @@
             <div class="bloc_actu">
                 <img src="../images/image_actu_2.jpg" class="img-actu">
                 <a href="https://www.psychomedia.qc.ca/diagnostics/qu-est-ce-que-le-trouble-delirant">
-                    <h3>Qu'est ce que le trouble délirant ?</h3>
+                    <h3>Qu'est-ce que le trouble délirant ?</h3>
                 </a>
                 <p>Qu'est-ce que le trouble délirant ? (Critères diagnostiques - DSM-5) Psychomédia Le trouble délirant
                     est caractérisé, selon les critères diagnostiques du DSM-5 (1), par la persistance d’idées ...</p>
@@ -196,17 +208,16 @@
             <div class="bloc_actu">
                 <img src="../images/image_actu_3.png" class="img-actu">
                 <a href="https://www.santementale.fr/2021/09/3114-le-numero-national-de-prevention-du-suicide/">
-                    <h3>3114: Le numero national de prévention du suicide</h3>
+                    <h3>3114 : Le numéro national de prévention du suicide</h3>
                 </a>
                 <p>Annoncé par le ministre de la Santé et des Solidarités lors de l’ouverture des Assises de la Santé
-                    mentale et de la psychiatrie le 27 septembre 2023, le numéro national de prévention du suicide
-                    ...</p>
+                    mentale et de la psychiatrie le 27 septembre 2023, le numéro national de prévention du suicide…                    </p>
             </div>
         </div>
     </section>
 </main>
-
 <footer class="footer-clean">
+
     <img src="../images/logo.png">
     <span class="secondaire">
     <h3><a href="#">L'association</a></h3>

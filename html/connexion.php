@@ -1,3 +1,9 @@
+<?php
+if (!session_id())
+    session_start();
+require_once '../app/flash.php';
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -13,7 +19,7 @@
 <body>
 <header>
     <div id="banner">
-        <a href="index.html">
+        <a href="index.php">
             <img src="../images/logo.png" alt="Logo de l'association France Dépression">
         </a>
         <nav>
@@ -104,14 +110,18 @@
     <section id="sign">
         <div>
             <h2>Je suis adhérent</h2>
-                <form>
+            <div id="error-message">
+                <?php
+                messageFlash(); ?>
+            </div>
+                <form action="signin.php" method="post">
                     <div class="div-input">
                         <label for="email">Adresse e-mail</label>
-                        <input type="email" id="email" placeholder="Entrez votre e-mail" required>
+                        <input type="email" id="email" name="email" placeholder="Entrez votre e-mail" required>
                     </div>
                     <div class="div-input password-container">
                         <label for="password">Mot de passe</label>
-                        <input type="password" id="password" placeholder="Entrez votre mot de passe" required>
+                        <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe" required>
                         <p class="toggle-password">Afficher</p>
                     </div>
                     <button type="submit">Se connecter</button>

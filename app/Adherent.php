@@ -2,13 +2,13 @@
 
 namespace Francedepression\Bddconnect;
 
-use Francedepression\Bddconnect\User;
-
 
 class Adherent extends User {
-    public function __construct(private string $email, private string $password, private bool $newsletter) {
+    public function __construct(private string $email,
+                                private string $password,
+                                private bool $newsletter,
+                                private bool $hasdeclinedsurvey = false) {
         parent::__construct($email, $password);
-
     }
 
     public function getEmail() : string {
@@ -16,5 +16,7 @@ class Adherent extends User {
     }
 
     public function getNewsletter() : bool { return $this->newsletter; }
+
+    public function hasDeclinedSurvey() : bool { return $this->hasdeclinedsurvey; }
 
 }

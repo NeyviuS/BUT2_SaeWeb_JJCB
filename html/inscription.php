@@ -20,7 +20,7 @@ require_once '../app/flash.php';
 <body>
 <header>
     <div id="banner">
-        <a href="index.html">
+        <a href="index.php">
             <img src="../images/logo.png" alt="Logo de l'association France Dépression">
         </a>
         <nav>
@@ -58,7 +58,7 @@ require_once '../app/flash.php';
                         <a href="https://fr.linkedin.com/company/france-depression">
                             <img src="../images/linkedin-logo.png" alt="LinkedIn">
                         </a>
-                        <a href="connexion.html">
+                        <a href="connexion.php">
                             <img src="../images/icon_adherent.png" alt="Connexion">
                         </a>
                     </div>
@@ -151,7 +151,7 @@ require_once '../app/flash.php';
                 <button type="submit">S'inscrire</button>
             </form>
             <div>
-                <span>Déjà adhérent ? </span><a href="connexion.html">Connectez-vous.</a>
+                <span>Déjà adhérent ? </span><a href="connexion.php">Connectez-vous.</a>
             </div>
         </div>
 
