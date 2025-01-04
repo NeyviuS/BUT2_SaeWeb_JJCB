@@ -1,11 +1,9 @@
 <?php
 
-if(!session_id())
-    session_start();
+if (!session_id()) session_start();
 
 use Francedepression\Bddconnect\BddConnect;
 use Francedepression\Bddconnect\MariaDBUserRepository;
-use Francedepression\Bddconnect\Authentification;
 
 require_once '../vendor/autoload.php';
 
@@ -16,7 +14,6 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         $bdd = new BddConnect();
         $pdo = $bdd->connexion();
         $trousseau = new MariaDBUserRepository($pdo);
-        $auth = new Authentification($trousseau);
         $trousseau->declineSurvey($_SESSION['user']);
     }
 

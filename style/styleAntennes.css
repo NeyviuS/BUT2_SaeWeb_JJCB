@@ -8,7 +8,6 @@
 
 body {
     color: var(--couleur-textes); /* Texte en bleu sombre */
-    font-family: Arial, sans-serif;
 }
 
 #creerantenne{

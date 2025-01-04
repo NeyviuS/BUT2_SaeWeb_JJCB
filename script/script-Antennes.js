@@ -1,4 +1,4 @@
-import {listeAntennes} from './antennes.js';
+import {listeAntennes} from './antennes-data.js';
 
 const elt = document.querySelector('#txtRecherche');
 
