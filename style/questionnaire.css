@@ -1,0 +1,54 @@
+.formbold-main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+    padding-top: 10%;
+  }
+
+.formbold-form-select {
+    width: 100%;
+    padding: 12px 22px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border: 1px solid #dde3ec;
+    background: #ffffff;
+    font-size: 16px;
+    color: #536387;
+    outline: none;
+    resize: none;
+  }
+
+.formbold-input-radio-wrapper {
+    margin-bottom: 30px;
+}
+
+.formbold-radio-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formbold-form-input{
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.formbold-radio-label {
+  font-size: 14px;
+  line-height: 24px;
+  color: #07074d;
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#message{
+  width: 100%;
+  padding-bottom: 10px;
+}
