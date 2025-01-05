@@ -2,7 +2,8 @@
 
 header {
     position: fixed;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3)
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+    z-index:1000;
 }
 
 /* Logo France Dépression */
@@ -311,4 +312,8 @@ h2 {
     margin:0;
     padding: 0 15% 5% 15%;
     font-size: 24px;
+}
+
+form {
+    margin:0
 }

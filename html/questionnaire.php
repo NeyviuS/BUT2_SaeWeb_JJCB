@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/questionnaire.css">
+    <link rel="stylesheet" href="../style/styleQuestionnaire.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Miadmi+One&display=swap" rel="stylesheet">
     <script src="../script/script.js" type="module"></script>
@@ -144,8 +144,62 @@
             </select>
         </div>
 
+        <div class="formbold-input-group">
+            <label class="formbold-form-label">
+            Dans quel lieu vivez vous ?
+            </label>
+
+            <select class="formbold-form-select" name="situation" id="situation">
+                <option value="famille-permanence">Dans la famille en permanence</option>
+                <option value="famille-accueil-activites">Dans la famille avec une solution d’accueil ou des activités en journée</option>
+                <option value="famille-temporaire-etablissement">Dans la famille principalement mais avec un accueil temporaire ou séquentiel en établissement</option>
+                <option value="logement-independant">Dans un logement indépendant</option>
+                <option value="habitat-inclusif">Dans un habitat inclusif</option>
+                <option value="foyer-accueil-medicalise">Dans un foyer d’accueil médicalisé (FAM)</option>
+                <option value="maison-accueil-specialise">Dans une maison d’accueil spécialisé (MAS)</option>
+                <option value="foyer-vie-hebergement">Dans un foyer de vie ou foyer d’hébergement</option>
+                <option value="ime-internat">En IME avec internat</option>
+                <option value="hospitalisation-psychiatrie">Hospitalisation en psychiatrie</option>
+                <option value="autre">Autre</option>
+            </select>
+        </div>
+
         <div class="formbold-input-radio-wrapper">
-            <label for="ans" class="formbold-form-label">
+            <label for="satis-lieu" class="formbold-form-label">
+            Le lieu correspond-il a votre choix ?
+            </label>
+
+            <div class="formbold-radio-flex">
+            <div class="formbold-radio-group">
+                <label class="formbold-radio-label">
+                <input
+                    class="formbold-input-radio"
+                    type="radio"
+                    name="satis-lieu"
+                    id="satis-lieu"
+                />
+                Oui
+                <span class="formbold-radio-checkmark"></span>
+                </label>
+            </div>
+
+            <div class="formbold-radio-group">
+                <label class="formbold-radio-label">
+                <input
+                    class="formbold-input-radio"
+                    type="radio"
+                    name="satis-lieu"
+                    id="satis-lieu"
+                />
+                Non
+                <span class="formbold-radio-checkmark"></span>
+                </label>
+            </div>
+            </div>
+        </div>
+
+        <div class="formbold-input-radio-wrapper">
+            <label for="recom-site" class="formbold-form-label">
             Recommanderiez vous ce site pour un proche a vous dans le besoin ?
             </label>
 
@@ -155,10 +209,10 @@
                 <input
                     class="formbold-input-radio"
                     type="radio"
-                    name="ans"
-                    id="ans"
+                    name="recom-site"
+                    id="recom-site"
                 />
-                Yes
+                Oui
                 <span class="formbold-radio-checkmark"></span>
                 </label>
             </div>
@@ -168,10 +222,10 @@
                 <input
                     class="formbold-input-radio"
                     type="radio"
-                    name="ans"
-                    id="ans"
+                    name="recom-site"
+                    id="recom-site"
                 />
-                No
+                Non
                 <span class="formbold-radio-checkmark"></span>
                 </label>
             </div>
@@ -181,10 +235,10 @@
                 <input
                     class="formbold-input-radio"
                     type="radio"
-                    name="ans"
-                    id="ans"
+                    name="recom-site"
+                    id="recom-site"
                 />
-                Maybe
+                Peut-etre
                 <span class="formbold-radio-checkmark"></span>
                 </label>
             </div>

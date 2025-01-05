@@ -1,14 +1,19 @@
+<?php
+
+require_once '../app/showSurveyPopup.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title><?php echo title?></title>
+    <link rel="icon" href="../images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/styleAntennes.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Miadmi+One&display=swap" rel="stylesheet">
     <script src="../script/script.js" type="module"></script>
-    <script src="../script/pageAntennes.js" type="module"></script>
 </head>
 <body>
 <header>
@@ -23,10 +28,10 @@
                     <div class="menu" id="menu-association">
                         <ul>
                             <li>
-                                <a href="./quisommesnous.html">Qui sommes-nous ?</a>
+                                <a href="quisommesnous.php">Qui sommes-nous</a>
                             </li>
                             <li>
-                                <a href="antennes.html">Edito</a>
+                                <a href="antennes.php">Edito</a>
                             </li>
                             <li>
                                 <a href="">Nous soutenir</a>
@@ -35,10 +40,10 @@
                     </div>
                 </li>
                 <li>
-                    <a href="antennes.html">NOS ANTENNES</a>
+                    <a href="antennes.php">NOS ANTENNES</a>
                 </li>
                 <li>
-                    <a href="ressources.html">RESSOURCES</a>
+                    <a href="ressources.php">RESSOURCES</a>
                 </li>
                 <li id="separateur">
 
@@ -67,7 +72,7 @@
                     <div class="menu" id="menu-association-mobile">
                         <ul>
                             <li>
-                                <a href="./quisommesnous.html">Qui sommes-nous ?</a>
+                                <a href="quisommesnous.php">Qui sommes-nous ?</a>
                             </li>
                             <li>
                                 <a href="">Edito</a>
@@ -79,10 +84,13 @@
                     </div>
                 </li>
                 <li>
-                    <a href="antennes.html">Nos antennes</a>
+                    <a href="antennes.php">Nos antennes</a>
                 </li>
                 <li>
-                    <a href="ressources.html">Ressources</a>
+                    <a href="ressources.php">Ressources</a>
+                </li>
+                <li>
+                    <a href="connexion.php">Se connecter</a>
                 </li>
             </ul>
             <div class="social-media-container">
@@ -100,64 +108,3 @@
         <span id="close_barre_info">×</span>
     </div>
 </header>
-<main>
-    <section>
-        <h2>Nos antennes</h2>
-        <article id="zoneMap">
-            <iframe src="https://www.google.com/maps/d/embed?mid=1ks8NbUMnAuvY61eSfMqcjWaJlfWJ29o&ehbc=2E312F&noprof=1"></iframe>
-        </article>
-
-        <article id="zoneRechercheDetails">
-            <div id="partieRecherche">
-                <h2>Détails</h2>
-                <label>
-                    <input id="txtRecherche" type="text" placeholder="Code postal, ville...">
-                </label>
-                <template id="antenne">
-                    <li>
-                        <details class="detailsAntenne">
-                            <summary>
-                                <span class="nomAntenne"></span>
-                                <span class="villeCPAntenne"></span>
-                            </summary>
-                            <p class="paragrAntenne"></p>
-                        </details>
-                    </li>
-                </template>
-                <ul id="listeAntennes"></ul>
-            </div>
-        </article>
-    </section>
-    <section id="creerantenne">
-        Vous n’avez pas trouvé d’antenne à proximité de chez vous ? <a href="">Créez-en une dès maintenant</a> ou
-        contactez-nous via <a>contact@francedepression.fr</a> ou au <a>07 84 96 88 28</a>.
-
-    </section>
-</main>
-
-<footer class="footer-clean">
-    <img src="../images/logo.png">
-    <span class="secondaire">
-    <h3><a href="#">L'association</a></h3>
-      <ul>
-        <li><a href="#">A propos de nous</a></li>
-        <li><a href="#">Nous contacter</a></li>
-        <li><a href="#">Nous soutenir</a></li>
-        <li><a href="#">Actualités</a></li>
-      </ul>
-  </span>
-    <span class="secondaire">
-    <h3><a href="#">Antennes</a></h3>
-      <ul>
-        <li><a href="#">Créer une antenne</a></li>
-        <li><a href="#">Toutes nos antennes</a></li>
-      </ul>
-  </span>
-    <span>
-    <h3><a href="#">Ressources</a></h3>
-    <h3><a href="#">Mentions légales</a></h3>
-    <h3><a href="#">Paramètres des cookies</a></h3>
-  </span>
-</footer>
-</body>
-</html>
