@@ -105,6 +105,7 @@
 <body>
     <div class="formbold-main-wrapper">
         <form action="https://formbold.com/s/FORM_ID" method="POST">
+            <h2>Enquête</h2>
         <div class="formbold-input-group">
             <label for="age" class="formbold-form-label"> Quel age avez vous ?</label>
             <input

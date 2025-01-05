@@ -1,4 +1,5 @@
 .formbold-main-wrapper {
+    background: linear-gradient(45deg, whitesmoke, ghostwhite, ghostwhite);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,4 +55,19 @@
 
 label {
   font-size: 20px;
+}
+
+form{
+  background-color: white;
+  padding: 32px;
+  border-radius: 32px;
+}
+
+.formbold-btn{
+  border-radius: 10px;
+  background-color: dodgerblue;
+  color: white;
+  padding: 12px;
+  border: 0;
+  cursor:pointer ;
 }
