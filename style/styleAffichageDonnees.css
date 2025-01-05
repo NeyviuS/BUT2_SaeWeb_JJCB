@@ -1,0 +1,43 @@
+header{
+    top:0px;
+    left:0px;
+}
+
+body{
+    margin: 0px;
+}
+article{
+    text-align: center;
+}
+#zoneQuiARepondu{
+    margin-top: 8.5%;
+    background-color: #cde4bf;
+}
+#zoneLieuDeVie{
+    background-color: #9acfaf;
+}
+#zoneQualiteDeVie{
+    background-color: #97c8c4;
+    padding-bottom: 5%;
+}
+
+.graphiques{
+    display: flex;
+    justify-content: space-around;
+    gap: 5%;
+    flex-wrap: wrap;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+#graphiqueLieuVie{
+    margin-bottom: 3%;
+}
+
+h1{
+    padding: 2%;
+    margin-top: 0px;
+}
+
+#donneesAge{
+    margin-top: 8%;
+}
