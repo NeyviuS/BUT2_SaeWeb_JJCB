@@ -275,6 +275,7 @@
                         Des suggestions ou commmentaires ?
                     </label>
                     <textarea
+                            maxlength="200"
                             rows="6"
                             name="message"
                             id="message"
