@@ -8,6 +8,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Miadmi+One&display=swap" rel="stylesheet">
     <script src="../script/script.js" type="module"></script>
+    <script src="../script/ScriptQuestionnaire.js/"></script>
 </head>
 <body>
 <header>
@@ -115,6 +116,7 @@
                             id="age"
                             placeholder="Exemple: 25"
                             class="formbold-form-input"
+                            min= "0"
 
                     />
                 </div>
@@ -284,7 +286,7 @@
                     ></textarea>
                 </div>
 
-                <button class="formbold-btn">Soumettre</button>
+                <button type="submit" id="submit-button" disabled>Soumettre</button>
             </form>
         </div>
     </section>
