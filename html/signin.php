@@ -18,7 +18,7 @@ $auth = new Authentification($trousseau);
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     try {
-        $retour = $auth->authenticate($_POST['email'], $_POST['password']);
+        $retour = $auth->authenticate_adherent($_POST['email'], $_POST['password']);
         $message = "Authentification réussie";
         $code = "success";
         $_SESSION['user'] = $_POST['email'];

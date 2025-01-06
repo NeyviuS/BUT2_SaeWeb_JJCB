@@ -2,7 +2,7 @@
 
 namespace Francedepression\Bddconnect;
 
-class User {
+class Admin {
 
   public function __construct(private string $email, private string $password) { }
 

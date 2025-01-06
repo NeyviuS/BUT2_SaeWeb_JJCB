@@ -20,6 +20,8 @@
         <h3><a href="ressources.php">Ressources</a></h3>
         <h3><a href="#">Mentions légales</a></h3>
         <h3><a href="#">Paramètres des cookies</a></h3>
+        <h3><a href="admin-connexion.php">Accès réservé</a></h3>
+
     </span>
 </footer>
 </body>

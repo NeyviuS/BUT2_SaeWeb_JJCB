@@ -3,7 +3,7 @@
 namespace Francedepression\Bddconnect;
 
 
-class Adherent extends User {
+class Adherent extends Admin {
     public function __construct(private string $email,
                                 private string $password,
                                 private bool $newsletter,

@@ -6,7 +6,7 @@ function messageFlash() : void {
 
             $message = htmlspecialchars($message, ENT_QUOTES, 'UTF-8');
 
-            echo "<p>{$message}</p>";
+            echo "<div id='error-message' class='$type'><p>{$message}</p></div>";
         }
 
         unset($_SESSION['flash']);
