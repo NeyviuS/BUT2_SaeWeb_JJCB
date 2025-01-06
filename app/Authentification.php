@@ -32,8 +32,19 @@ class Authentification {
     /**
      * @throws Exception
      */
-    public function authenticate(string $email, string $password) : bool {
+    public function authenticate_adherent(string $email, string $password) : bool {
         $user = $this->userRepository->findAdherentByEmail($email);
+        if(!$user || !password_verify($password, $user->getPassword())) {
+            throw new Exception("Mot de pass ou email invalide");
+        }
+        return true;
+    }
+
+    /**
+     * @throws Exception
+     */
+    public function authenticate_admin(string $email, string $password) : bool {
+        $user = $this->userRepository->findAdminByEmail($email);
         if(!$user || !password_verify($password, $user->getPassword())) {
             throw new Exception("Mot de pass ou email invalide");
         }
@@ -52,5 +63,22 @@ class Authentification {
     $email = trim($email);
     return !filter_var($email, FILTER_VALIDATE_EMAIL);
   }
+
+    /**
+     * @throws Exception
+     */
+    public function register_admin(string $email, string $password) : bool {
+
+        if($this->invalideEmail($email)) {
+            throw new Exception("Email invalide");
+        }
+        if($this->userRepository->findAdminByEmail($email)) {
+            throw new Exception("Utilisateur déjà enregistré");
+        }
+
+        $admin = new Admin($email, $password);
+
+        return $this->userRepository->saveAdmin($admin);
+    }
 
 }

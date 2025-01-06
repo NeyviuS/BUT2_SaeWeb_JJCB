@@ -112,31 +112,4 @@ require_once 'header.php';
         </div>
     </section>
 </main>
-<footer class="footer-clean">
-
-    <img src="../images/logo.png">
-    <span class="secondaire">
-    <h3><a href="#">L'association</a></h3>
-      <ul>
-        <li><a href="#">A propos de nous</a></li>
-        <li><a href="#">Nous contacter</a></li>
-        <li><a href="#">Nous soutenir</a></li>
-        <li><a href="#">Actualités</a></li>
-      </ul>
-  </span>
-    <span class="secondaire">
-    <h3><a href="#">Antennes</a></h3>
-      <ul>
-        <li><a href="#">Créer une antenne</a></li>
-        <li><a href="#">Toutes nos antennes</a></li>
-      </ul>
-  </span>
-    <span>
-    <h3><a href="#">Ressources</a></h3>
-    <h3><a href="#">Mentions légales</a></h3>
-    <h3><a href="#">Paramètres des cookies</a></h3>
-  </span>
-</footer>
-
-</body>
-</html>
+<?php require_once 'footer.php';

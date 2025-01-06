@@ -47,4 +47,30 @@ class MariaDBUserRepository implements IUserRepository
         $stmt->execute(['email' => $email]);
     }
 
+    public function findAdminByEmail(string $email): ? Admin
+    {
+        $stmt = $this->dbConnexion->prepare(
+        "SELECT * FROM Admin WHERE email = :email"
+    );
+        $stmt->execute(['email' => $email]);
+        $result = $stmt->fetch(\PDO::FETCH_ASSOC);
+
+        if ($result) {
+            return new Admin($result['Email'], $result['Password']);
+        }
+        return null;
+    }
+
+    public function saveAdmin(Admin $admin): bool
+    {
+        $stmt = $this->dbConnexion->prepare(
+            "INSERT INTO admin (Email, Password)
+                    VALUES (:email, :password)"
+        );
+
+        return $stmt->execute([
+            'email' => $admin->getEmail(),
+            'password' => password_hash($admin->getPassword(), PASSWORD_DEFAULT),
+        ]);
+    }
 }
