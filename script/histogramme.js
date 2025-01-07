@@ -37,7 +37,7 @@ function wrapTextSimplified(selection, maxWidth) {
 }
 
 
-function drawHistogram(data, selector, wi, he) {
+export function drawHistogram(data, selector, wi, he) {
     const margin = { top: 20, right: 30, bottom: 100, left: 40 };
     const width = wi - margin.left - margin.right;
     const height = he - margin.top - margin.bottom;
@@ -97,14 +97,19 @@ function drawHistogram(data, selector, wi, he) {
         .text(d => d.value);
 }
 
-const age = [
+export function updateMoyMinMaxAge(moy, min, max){
+    document.querySelector("#moyenneAge").textContent = "Moyenne d'age : "+moy+" ans";
+    document.querySelector("#minMaxAge").textContent = "Le plus jeune : "+min+" ans, le plus vieux : "+max+" ans";
+}
+
+export const age = [
     { label: "15-25 ans", value: 30 },
     { label: "25-35 ans", value: 80 },
     { label: "35-50 ans", value: 45 },
     { label: "50-65 ans", value: 60 },
     { label: "65 ans et +", value: 20 }
 ];
-const lieuVie = [
+export const lieuVie = [
     { label: "Dans la famille en permanance", value: 70 },
     { label: "Dans la famille avec une solution d'accueil ou des activités en journée", value: 50 },
     { label: "Dans la famille principalement mais avec un accueil temporaire ou séquentiel en établissement", value: 45 },
@@ -117,7 +122,7 @@ const lieuVie = [
     { label: "Hospitalisation en psychatrie", value: 20 },
     { label: "Autre", value: 30 }
 ];
-const qualiteVie = [
+export const qualiteVie = [
     { label: "Tout va bien", value: 50 },
     { label: "Restriction de la vie sociale", value: 70 },
     { label: "Souffrance psychologique", value: 40 },
@@ -130,6 +135,8 @@ const qualiteVie = [
     { label: "Éloignement de la personne", value: 35 },
 ];
 
+/*
 drawHistogram(age, "#histogrammeAge", 500, 300)
 drawHistogram(lieuVie, "#graphiqueLieuVie", window.innerWidth*0.9,400)
 drawHistogram(qualiteVie, "#graphiqueQualiteVie", window.innerWidth*0.9,400)
+ */

@@ -1,5 +1,5 @@
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
-function drawPieChart(data, selector) {
+export function creerCamembert(data, selector) {
     // Dimensions
     const width = 300;
     const height = 300;
@@ -60,5 +60,3 @@ function drawPieChart(data, selector) {
         .text(d => `${d.label}: ${d.value}`);
 }
 
-drawPieChart([{ label: "Oui", value: 50 }, { label: "Non", value: 50 }, { label: "Pas d'orientation CDAPH", value: 50 }], "#camembertCDAPH");
-drawPieChart([{ label: "Oui", value: 30 }, { label: "Non", value: 70 }], "#camembertChoix");
