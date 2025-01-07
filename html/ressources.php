@@ -13,8 +13,8 @@ require_once 'header.php';
     <section></section>
     <br><br><br>
 <template id="ressource-template">
-    <div class="ressource">
-        <p class="ressource-title">Titre</p>
+    <div class="ressource cliquable">
+        <h3 class="ressource-title">Titre</h3>
         <p class="ressource-description">Intitulé de la ressource documentaire...</p>
         <button class="ressource-type">Type de la ressource</button>
     </div>

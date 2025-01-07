@@ -7,6 +7,7 @@ listeRessources.forEach(elt => {
     copie.querySelector(".ressource-title").textContent = elt.title;
     copie.querySelector(".ressource-description").textContent = elt.desc;
     copie.querySelector('.ressource-type').textContent = elt.type;
+    copie.querySelector(".ressource").style.backgroundColor = elt.color;
 
     listeRes.appendChild(copie);
 });
