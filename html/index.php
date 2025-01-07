@@ -7,6 +7,7 @@ require_once 'header.php';
 ?>
 
 <link rel="stylesheet" href="../style/styleIndex.css">
+<script src="../script/index.js" type="module"></script>
 <main>
     <section id="home">
         <div>
@@ -82,10 +83,12 @@ require_once 'header.php';
         </div>
     </section>
     <section id="actualite">
-        <h2>L'actualité</h2>
-        <div id="actu-container">
+    <h2>L'actualité</h2>
+    <div id="carousel-container">
+        <button id="prev-btn" aria-label="Previous">❮</button>
+        <div id="actu-carousel">
             <div class="bloc_actu">
-                <img src="../images/image_actu_1.jpeg" class="img-actu">
+                <img src="../images/image_actu_1.jpeg" class="img-actu" alt="Dépression résistante">
                 <a href="https://www.lamontagne.fr/clermont-ferrand-63000/actualites/depression-resistante-une-alternative-non-medicamenteuse-proposee-au-centre-hospitalier-sainte-marie-a-clermont-ferrand_13922641/">
                     <h3>Dépression résistante : une alternative non médicamenteuse</h3>
                 </a>
@@ -94,7 +97,7 @@ require_once 'header.php';
                     ...</p>
             </div>
             <div class="bloc_actu">
-                <img src="../images/image_actu_2.jpg" class="img-actu">
+                <img src="../images/image_actu_2.jpg" class="img-actu" alt="Trouble délirant">
                 <a href="https://www.psychomedia.qc.ca/diagnostics/qu-est-ce-que-le-trouble-delirant">
                     <h3>Qu'est-ce que le trouble délirant ?</h3>
                 </a>
@@ -102,7 +105,7 @@ require_once 'header.php';
                     est caractérisé, selon les critères diagnostiques du DSM-5 (1), par la persistance d’idées ...</p>
             </div>
             <div class="bloc_actu">
-                <img src="../images/image_actu_3.png" class="img-actu">
+                <img src="../images/image_actu_3.png" class="img-actu" alt="Numéro prévention du suicide">
                 <a href="https://www.santementale.fr/2021/09/3114-le-numero-national-de-prevention-du-suicide/">
                     <h3>3114 : Le numéro national de prévention du suicide</h3>
                 </a>
@@ -110,6 +113,8 @@ require_once 'header.php';
                     mentale et de la psychiatrie le 27 septembre 2023, le numéro national de prévention du suicide…                    </p>
             </div>
         </div>
-    </section>
+        <button id="next-btn" aria-label="Next">❯</button>
+    </div>
+</section>
 </main>
 <?php require_once 'footer.php';

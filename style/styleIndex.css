@@ -74,6 +74,79 @@
 
 /*L'actualité*/
 
+
+#carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+#actu-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%;
+}
+
+.bloc_actu {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+
+#prev-btn, #next-btn {
+    background-color: #fff;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: #333;
+    padding: 5px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+#prev-btn {
+    left: 10px;
+}
+
+#next-btn {
+    right: 10px;
+}
+
+.img-actu {
+    width: 60%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+@media (max-width: 768px) {
+    #carousel-container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .bloc_actu {
+        padding: 10px; 
+    }
+    #prev-btn, #next-btn {
+        font-size: 1.5rem;
+    }
+}
+
+
+
 #actualite {
     background-color: #F49494;
 }
@@ -97,29 +170,6 @@
     font-family: 'Miadmi One', sans-serif;
 }
 
-
-.bloc_actu {
-    min-width: 250px;
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 32px;
-}
-
-#actu-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 0 100px
-}
-
-.img-actu {
-    max-width: 120%;
-    height: auto;
-    max-height: 40%;
-}
 
 #presentation {
     background-color: mediumpurple;
@@ -176,3 +226,4 @@
     width: 60%;
     height: auto;
 }
+
