@@ -7,16 +7,16 @@ require_once 'header.php';
 require_once '../app/flash.php';
 ?>
 
-<link rel="stylesheet" href="../style/styleConnexion.css">
-<script src="../script/showPassword.js" type="module"></script>
-<main>
-    <section id="sign">
-        <div>
-            <h2>Je suis adhérent</h2>
-            <div id="error-message">
-                <?php
-                messageFlash(); ?>
-            </div>
+    <link rel="stylesheet" href="../style/styleConnexion.css">
+    <script src="../script/showPassword.js" type="module"></script>
+    <main>
+        <section id="sign">
+            <div>
+                <h2>Je suis adhérent</h2>
+                <div id="error-message">
+                    <?php
+                    messageFlash(); ?>
+                </div>
                 <form action="signin.php" method="post">
                     <div class="div-input">
                         <label for="email">Adresse e-mail</label>
@@ -24,7 +24,8 @@ require_once '../app/flash.php';
                     </div>
                     <div class="div-input password-container">
                         <label for="password">Mot de passe</label>
-                        <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe" required>
+                        <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe"
+                               required>
                         <p class="toggle-password">Afficher</p>
                     </div>
                     <button type="submit">Se connecter</button>
@@ -38,6 +39,6 @@ require_once '../app/flash.php';
             </div>
 
 
-    </section>
-</main>
+        </section>
+    </main>
 <?php require_once 'footer.php';

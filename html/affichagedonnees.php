@@ -1,32 +1,32 @@
 <?php
+
+if (!session_id()) session_start();
+if(!isset($_SESSION['admin'])) {
+    throw new Exception("Accès interdit");
+}
+
 const title = "Affichage données";
 require_once 'header.php';
 ?>
-    <head>
-        <meta charset="UTF-8">
-        <title>Donnees</title>
-        <link rel="stylesheet" href="../style/style.css">
         <link rel="stylesheet" href="../style/styleAffichageDonnees.css">
         <script src="../script/carteInteractiveDonnees.js" type="module"></script>
         <script src="../script/histogramme.js" type="module"></script>
         <script src="../script/camembert.js" type="module"></script>
-        <script src="../script/script.js" type="module"></script>
-    </head>
 <main>
-    <article id="zoneQuiARepondu">
-        <h1>Qui a répondu ? </h1>
+    <section id="zoneQuiARepondu">
+        <h2>Qui a répondu ? </h2>
         <div id="graphiquesQuiARepondu" class="graphiques">
             <div id="carte"></div>
             <div id="donneesAge">
-                <h1>Age des participants</h1>
+                <h2>Age des participants</h2>
                 <div id="histogrammeAge"></div>
                 <div id="moyenneAge">Moyenne d'age</div>
                 <div id="minMaxAge">Age min / age max</div>
             </div>
         </div>
-    </article>
-    <article id="zoneLieuDeVie">
-        <h1>Lieu de vie</h1>
+    </section>
+    <section id="zoneLieuDeVie">
+        <h2>Lieu de vie</h2>
         <div id="graphiquesLieuDeVie" class="graphiques">
             <div id="graphiqueLieuVie"></div>
             <!-- <div id="lotcamembertcdaph">
@@ -34,13 +34,13 @@ require_once 'header.php';
                 <div id="camembertCDAPH"></div>
             </div> -->
             <div id="lotcamembertchoix">
-                <h1>Le lieu de vie correspond-il à votre choix ?</h1>
+                <h2>Le lieu de vie correspond-il à votre choix ?</h2>
                 <div id="camembertChoix"></div>
             </div>
         </div>
-    </article>
+    </section>
     <article id="zoneQualiteDeVie">
-        <h1>Qualité de vie</h1>
+        <h2>Qualité de vie</h2>
         <div id="graphiqueQualiteVie"></div>
     </article>
 </main>

@@ -156,25 +156,3 @@
     color:black;
 }
 
-#error-message {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    width: 100%;
-}
-
-#error-message p {
-    border-radius: 8px;
-    color: white;
-    padding: 12px 16px;
-    margin: 0 32px;
-}
-
-.warning {
-    background-color: red;
-}
-
-.success {
-    background-color: limegreen;
-}
-

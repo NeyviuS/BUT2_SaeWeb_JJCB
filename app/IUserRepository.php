@@ -9,4 +9,6 @@ interface IUserRepository {
     public function findAdminByEmail(string $email): ? Admin;
 
     public function saveAdmin(Admin $admin) : bool;
+
+    public function register_answer(string $email, array $anwser): bool;
 }

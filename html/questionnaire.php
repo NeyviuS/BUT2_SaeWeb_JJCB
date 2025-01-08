@@ -1,113 +1,23 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style/styleQuestionnaire.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Miadmi+One&display=swap" rel="stylesheet">
-    <script src="../script/script.js" type="module"></script>
-    <script src="../script/ScriptQuestionnaire.js/"></script>
-</head>
-<body>
-<header>
-    <div id="banner">
-        <a href="index.html">
-            <img src="../images/logo.png" alt="Logo de l'association France Dépression">
-        </a>
-        <nav>
-            <ul>
-                <li>
-                    <a id="button-association">L'ASSOCIATION</a>
-                    <div class="menu" id="menu-association">
-                        <ul>
-                            <li>
-                                <a href="./quisommesnous.html">Qui sommes-nous ?</a>
-                            </li>
-                            <li>
-                                <a href="antennes.html">Edito</a>
-                            </li>
-                            <li>
-                                <a href="">Nous soutenir</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a href="antennes.html">NOS ANTENNES</a>
-                </li>
-                <li>
-                    <a href="ressources.html">RESSOURCES</a>
-                </li>
-                <li id="separateur">
+<?php
+if (!session_id()) session_start();
 
-                </li>
-                <li>
-                    <div class="social-media-container">
-                        <a href="https://www.instagram.com/francedepression/">
-                            <img src="../images/instagram-logo.png" alt="Instagram">
-                        </a>
-                        <a href="https://fr.linkedin.com/company/france-depression">
-                            <img src="../images/linkedin-logo.png" alt="LinkedIn">
-                        </a>
-                        <a href="connexion.php">
-                            <img src="../images/icon_adherent.png" alt="Connexion">
-                        </a>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-        <button id="buttonMenu">
-        </button>
-        <div class="menu" id="menumobile">
-            <ul>
-                <li>
-                    <a id="button-association-mobile">L'association</a>
-                    <div class="menu" id="menu-association-mobile">
-                        <ul>
-                            <li>
-                                <a href="./quisommesnous.html">Qui sommes-nous ?</a>
-                            </li>
-                            <li>
-                                <a href="">Edito</a>
-                            </li>
-                            <li>
-                                <a href="">Nous soutenir</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a href="antennes.html">Nos antennes</a>
-                </li>
-                <li>
-                    <a href="ressources.html">Ressources</a>
-                </li>
-                <li>
-                    <a href="connexion.php">Se connecter</a>
-                </li>
-            </ul>
-            <div class="social-media-container">
-                <a href="https://www.instagram.com/francedepression/">
-                    <img src="../images/instagram-logo.png" alt="Instagram">
-                </a>
-                <a href="https://fr.linkedin.com/company/france-depression">
-                    <img src="../images/linkedin-logo.png" alt="LinkedIn">
-                </a>
-            </div>
-        </div>
-    </div>
-    <div id="barre_info">
-        <p>Numéro d’écoute : 07 84 96 88 28 (Lundi au Samedi 10h-20h, Dimanche 14h-20h)</p>
-        <span id="close_barre_info">×</span>
-    </div>
-</header>
+const title = 'Enquête';
+
+require_once 'header.php';
+require_once '../app/flash.php';
+?>
+
+<link rel="stylesheet" href="../style/styleQuestionnaire.css">
+    <script src="../script/ScriptQuestionnaire.js" type="module"></script>
 <main>
     <section>
         <div class="formbold-main-wrapper text-dark">
-            <form action="https://formbold.com/s/FORM_ID" method="POST">
+            <form action="answer-survey.php" method="POST">
                 <h2>Enquête</h2>
+                <div id="error-message">
+                    <?php
+                    messageFlash(); ?>
+                </div>
                 <div class="formbold-input-group">
                     <label for="age" class="formbold-form-label"> Quel age avez vous ?</label>
                     <input
@@ -153,7 +63,7 @@
                         Dans quel lieu vivez vous ?
                     </label>
 
-                    <select class="formbold-form-select" name="situation" id="situation">
+                    <select class="formbold-form-select" name="situationh" id="situation">
                         <option value="famille-permanence">Dans la famille en permanence</option>
                         <option value="famille-accueil-activites">Dans la famille avec une solution d’accueil ou des
                             activités en journée
@@ -184,7 +94,7 @@
                                         class="formbold-input-radio"
                                         type="radio"
                                         name="satis-lieu"
-                                        id="satis-lieu"
+                                        value="oui"
                                 />
                                 Oui
                                 <span class="formbold-radio-checkmark"></span>
@@ -197,7 +107,7 @@
                                         class="formbold-input-radio"
                                         type="radio"
                                         name="satis-lieu"
-                                        id="satis-lieu"
+                                        value="non"
                                 />
                                 Non
                                 <span class="formbold-radio-checkmark"></span>
@@ -208,7 +118,7 @@
 
                 <div class="formbold-input-radio-wrapper">
                     <label for="recom-site" class="formbold-form-label">
-                        Recommanderiez vous ce site pour un proche a vous dans le besoin ?
+                        Recommanderiez vous ce site pour un proche à vous dans le besoin ?
                     </label>
 
                     <div class="formbold-radio-flex">
@@ -218,7 +128,7 @@
                                         class="formbold-input-radio"
                                         type="radio"
                                         name="recom-site"
-                                        id="recom-site"
+                                        value="oui"
                                 />
                                 Oui
                                 <span class="formbold-radio-checkmark"></span>
@@ -231,7 +141,7 @@
                                         class="formbold-input-radio"
                                         type="radio"
                                         name="recom-site"
-                                        id="recom-site"
+                                        value="non"
                                 />
                                 Non
                                 <span class="formbold-radio-checkmark"></span>
@@ -244,7 +154,7 @@
                                         class="formbold-input-radio"
                                         type="radio"
                                         name="recom-site"
-                                        id="recom-site"
+                                        value="peut-etre"
                                 />
                                 Peut-etre
                                 <span class="formbold-radio-checkmark"></span>
@@ -255,10 +165,10 @@
 
                 <div class="formbold-input-group">
                     <label class="formbold-form-label">
-                        Comment décririez vous votre situation actuelle ?
+                        Comment décririez-vous votre situation actuelle ?
                     </label>
 
-                    <select class="formbold-form-select" name="situation" id="situation">
+                    <select class="formbold-form-select" name="situationp" id="situation">
                         <option value="tout-va-bien">Tout va bien</option>
                         <option value="restriction-vie-sociale">Restriction de la vie sociale</option>
                         <option value="souffrance-psychologique">Souffrance psychologique</option>
@@ -274,14 +184,14 @@
 
                 <div>
                     <label for="message" class="formbold-form-label">
-                        Des suggestions ou commmentaires ?
+                        Des suggestions ou commentaires ?
                     </label>
                     <textarea
                             maxlength="200"
                             rows="6"
                             name="message"
                             id="message"
-                            placeholder="Ecrivez ici..."
+                            placeholder="Écrivez ici..."
                             class="formbold-form-input"
                     ></textarea>
                 </div>
@@ -292,31 +202,4 @@
     </section>
 </main>
 
-<footer class="footer-clean">
-
-    <img src="../images/logo.png">
-    <span class="secondaire">
-        <h3><a href="#">L'association</a></h3>
-        <ul>
-            <li><a href="#">A propos de nous</a></li>
-            <li><a href="#">Nous contacter</a></li>
-            <li><a href="#">Nous soutenir</a></li>
-            <li><a href="#">Actualités</a></li>
-        </ul>
-        </span>
-    <span class="secondaire">
-            <h3><a href="#">Antennes</a></h3>
-            <ul>
-                <li><a href="#">Créer une antenne</a></li>
-                <li><a href="#">Toutes nos antennes</a></li>
-            </ul>
-        </span>
-    <span>
-            <h3><a href="#">Ressources</a></h3>
-            <h3><a href="#">Mentions légales</a></h3>
-            <h3><a href="#">Paramètres des cookies</a></h3>
-        </span>
-</footer>
-
-</body>
-</html>
+<?php require_once 'footer.php';

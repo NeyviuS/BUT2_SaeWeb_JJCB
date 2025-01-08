@@ -20,7 +20,7 @@ if (isset($_SESSION['user']) && !isset($_SESSION['hidesurvey'])) {
         echo '
             <form action="../html/hideSurvey.php" method="POST">
                 <div id="survey-banner">
-                        <p>Votre avis compte pour nous ! <a href="enquete.html">Participez à notre enquête</a>.</p>
+                        <p>Votre avis compte pour nous ! <a href="../html/questionnaire.php">Participez à notre enquête</a>.</p>
                         <div>
                             <button id="survey-later" name="action" value="hide">Plus tard</button>
                             <button id="survey-never" name="action" value="nevershow">Ne plus afficher</button>

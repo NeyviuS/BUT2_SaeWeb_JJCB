@@ -14,6 +14,10 @@ class Authentification {
     public function register_adherent(string $email, string $password, string $repeat, bool $newsletter, bool $cgu) : bool {
         if($cgu !== true) throw new Exception("Vous devez accepter les CGU");
 
+        if($_SESSION['user']) {
+            throw new Exception("Vous êtes déjà connecté");
+        }
+
         if($password !== $repeat) {
             throw new Exception("Mots de passe différents");
         }
@@ -33,6 +37,9 @@ class Authentification {
      * @throws Exception
      */
     public function authenticate_adherent(string $email, string $password) : bool {
+        if($_SESSION['user']) {
+            throw new Exception("Vous êtes déjà connecté");
+        }
         $user = $this->userRepository->findAdherentByEmail($email);
         if(!$user || !password_verify($password, $user->getPassword())) {
             throw new Exception("Mot de pass ou email invalide");
@@ -44,6 +51,9 @@ class Authentification {
      * @throws Exception
      */
     public function authenticate_admin(string $email, string $password) : bool {
+        if($_SESSION['admin']) {
+            throw new Exception("Vous êtes déjà connecté");
+        }
         $user = $this->userRepository->findAdminByEmail($email);
         if(!$user || !password_verify($password, $user->getPassword())) {
             throw new Exception("Mot de pass ou email invalide");
@@ -55,6 +65,17 @@ class Authentification {
         $adherent = $this->userRepository->findAdherentByEmail($email);
         if ($adherent) {
             return $adherent->hasDeclinedSurvey();
+        }
+        return false;
+    }
+
+    /**
+     * @throws Exception
+     */
+    public function isSurveyCompleted(string $email) : bool {
+        $adherent = $this->userRepository->findAdherentByEmail($email);
+        if ($adherent && $adherent->isSurveyCompleted()) {
+            throw new Exception("Vous avez déjà participé à l'enquête");
         }
         return false;
     }

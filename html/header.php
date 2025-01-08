@@ -1,5 +1,7 @@
 <?php
 
+if (!session_id()) session_start();
+
 require_once '../app/showSurveyPopup.php';
 
 ?>
@@ -59,6 +61,12 @@ require_once '../app/showSurveyPopup.php';
                         <a href="connexion.php">
                             <img src="../images/icon_adherent.png" alt="Connexion">
                         </a>
+                        <?php
+                        if (isset($_SESSION['user']))
+                            echo '<a href="deconnexion.php">
+<img src="../images/logout.256x256.png" alt="Deconnexion">
+</a>'
+                        ?>
                     </div>
                 </li>
             </ul>
@@ -89,9 +97,9 @@ require_once '../app/showSurveyPopup.php';
                 <li>
                     <a href="ressources.php">Ressources</a>
                 </li>
-                <li>
-                    <a href="connexion.php">Se connecter</a>
-                </li>
+                <?php
+                require_once 'addButtonConnection.php';
+                ?>
             </ul>
             <div class="social-media-container">
                 <a href="https://www.instagram.com/francedepression/">

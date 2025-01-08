@@ -15,7 +15,8 @@ require_once '../app/flash.php';
             <h2>Devenir adhérent</h2>
             <div id="error-message">
                 <?php
-                messageFlash(); ?>
+                messageFlash();
+                ?>
             </div>
             <form action="signup.php" method="post">
                 <div class="div-input">
@@ -56,8 +57,6 @@ require_once '../app/flash.php';
                 <span>Déjà adhérent ? </span><a href="connexion.php">Connectez-vous.</a>
             </div>
         </div>
-
-
     </section>
 </main>
 <?php require_once 'footer.php';

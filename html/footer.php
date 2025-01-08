@@ -21,6 +21,11 @@
         <h3><a href="#">Mentions légales</a></h3>
         <h3><a href="#">Paramètres des cookies</a></h3>
         <h3><a href="admin-connexion.php">Accès réservé</a></h3>
+        <?php
+            if (!session_id()) session_start();
+            if (isset($_SESSION['admin']))
+                echo '<h3><a href="affichagedonnees.php">Résultats enquêtes</a></h3>';
+        ?>
 
     </span>
 </footer>
