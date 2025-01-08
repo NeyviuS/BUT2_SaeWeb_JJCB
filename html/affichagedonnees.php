@@ -18,10 +18,10 @@ require_once 'header.php';
         <div id="graphiquesQuiARepondu" class="graphiques">
             <div id="carte"></div>
             <div id="donneesAge">
-                <h2>Age des participants</h2>
+                <h2>Âge des participants</h2>
                 <div id="histogrammeAge"></div>
                 <div id="moyenneAge">Moyenne d'age</div>
-                <div id="minMaxAge">Age min / age max</div>
+                <div id="minMaxAge">Âge min / age max</div>
             </div>
         </div>
     </section>

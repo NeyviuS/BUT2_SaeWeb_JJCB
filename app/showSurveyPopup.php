@@ -17,7 +17,9 @@ if (isset($_SESSION['user']) && !isset($_SESSION['hidesurvey'])) {
     $auth = new Authentification($trousseau);
 
     if (!$auth->hasDeclinedSurvey($_SESSION['user'])) {
-        echo '
+        try {
+            $auth->isSurveyCompleted($_SESSION['user']);
+            echo '
             <form action="../html/hideSurvey.php" method="POST">
                 <div id="survey-banner">
                         <p>Votre avis compte pour nous ! <a href="../html/questionnaire.php">Participez à notre enquête</a>.</p>
@@ -27,7 +29,12 @@ if (isset($_SESSION['user']) && !isset($_SESSION['hidesurvey'])) {
                         </div>
                     </div>
             </form>
+        } 
+        
         
     ';
+    } catch (Exception $e) {
+
+        }
+        }
     }
-}

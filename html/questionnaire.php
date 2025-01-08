@@ -19,7 +19,7 @@ require_once '../app/flash.php';
                     messageFlash(); ?>
                 </div>
                 <div class="formbold-input-group">
-                    <label for="age" class="formbold-form-label"> Quel age avez vous ?</label>
+                    <label for="age" class="formbold-form-label"> Quel âge avez-vous ?</label>
                     <input
                             type="number"
                             name="age"
@@ -33,7 +33,7 @@ require_once '../app/flash.php';
 
                 <div class="formbold-input-group">
                     <label for="region" class="formbold-form-label">
-                        Dans quelle region habitez vous ?
+                        Dans quelle région habitez-vous ?
                     </label>
 
                     <select class="formbold-form-select" name="region" id="region">
@@ -60,7 +60,7 @@ require_once '../app/flash.php';
 
                 <div class="formbold-input-group">
                     <label for="situation" class="formbold-form-label">
-                        Dans quel lieu vivez vous ?
+                        Dans quel lieu vivez-vous ?
                     </label>
 
                     <select class="formbold-form-select" name="situationh" id="situation">
@@ -84,7 +84,7 @@ require_once '../app/flash.php';
 
                 <div class="formbold-input-radio-wrapper">
                     <label for="satis-lieu" class="formbold-form-label">
-                        Le lieu correspond-il a votre choix ?
+                        Le lieu correspond-il à votre choix ?
                     </label>
 
                     <div class="formbold-radio-flex">
@@ -118,7 +118,7 @@ require_once '../app/flash.php';
 
                 <div class="formbold-input-radio-wrapper">
                     <label for="recom-site" class="formbold-form-label">
-                        Recommanderiez vous ce site pour un proche à vous dans le besoin ?
+                        Recommanderiez-vous ce site pour un proche à vous dans le besoin ?
                     </label>
 
                     <div class="formbold-radio-flex">
@@ -156,7 +156,7 @@ require_once '../app/flash.php';
                                         name="recom-site"
                                         value="peut-etre"
                                 />
-                                Peut-etre
+                                Peut-être
                                 <span class="formbold-radio-checkmark"></span>
                             </label>
                         </div>
