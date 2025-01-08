@@ -98,7 +98,7 @@ export function drawHistogram(data, selector, wi, he) {
 }
 
 export function updateMoyMinMaxAge(moy, min, max){
-    document.querySelector("#moyenneAge").textContent = "Moyenne d'age : "+moy+" ans";
+    document.querySelector("#moyenneAge").textContent = "Moyenne d'age : "+parseFloat(moy.toFixed(2))+" ans";
     document.querySelector("#minMaxAge").textContent = "Le plus jeune : "+min+" ans, le plus vieux : "+max+" ans";
 }
 
