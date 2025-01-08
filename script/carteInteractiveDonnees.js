@@ -38,13 +38,14 @@ export function creerCarte(data, total) {
             .on("mouseover", function (event, d) {
                 const region = getRegionByRegCode(data, d.properties.reg);
                 const value = region ? region.val : "Non disponible";
+                const valeur = ((value/total)*100);
                 console.log("valeur de région : "+JSON.stringify(region, null, 2));
                 d3.select(this)
                     .attr("fill", "green");
                 tooltip.style("display", "block")
                     .html(`<strong>${d.properties.libgeo}</strong>
             <br><span>Nombre de réponses : `+ value +`</span>
-            <br><span>Proportion : `+(value/total)*100+`%</span> `)
+            <br><span>Proportion : `+parseFloat(valeur.toFixed(2))+`%</span> `)
                     .style("left", (event.pageX + 10) + "px")
                     .style("top", (event.pageY + 10) + "px");
             })
